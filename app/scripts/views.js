@@ -9,7 +9,7 @@ TrackView = Backbone.View.extend({
   },
 
   initialize: function() {
-    $('.track-box').append(this.el);
+    $('.add-holder').append(this.el);
     this.render();
   },
 
@@ -20,7 +20,7 @@ TrackView = Backbone.View.extend({
   addStep: function(){
     new StepView();
   },
-  
+
 }),
 
 StepView = Backbone.View.extend ({
@@ -40,13 +40,11 @@ StepView = Backbone.View.extend ({
 
   render: function() {
     this.$el.append( this.template({item: this.model }) )
-
   },
 
 
   deleteStep: function () {
     this.remove()
   },
-
 
 })

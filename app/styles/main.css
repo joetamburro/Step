@@ -12,6 +12,7 @@ body {
 }
 
 .track-box {
+    position: relative;
     margin: 50px auto 0 auto;
     width: 300px;
     font-size: 18px;
@@ -20,6 +21,12 @@ body {
     background-color: #eee;
     border-radius: 6px;
     padding: 60px;
+}
+
+.add-holder {
+    position: absolute;
+    bottom: 35px;
+    right: 55px;
 }
 
 .step-box {
