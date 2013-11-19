@@ -11,15 +11,9 @@ AppRouter = Backbone.Router.extend ({
   },
 
   homeView: function(){
-    // $('.content-area').html('')
-    // $('.navigation-bar .nav').first().addClass('current-tab'); 
-    // new HomeView()
+
   },
 
-  // currentlyPlaying: function(){
-  //   // $('.content-area').html('')
-  //   new CurrentlyPlayingView()
-  // },
  
 })
 
