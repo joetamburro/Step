@@ -22,6 +22,11 @@ body {
     padding: 60px;
 }
 
+.step-box {
+    border: 1px solid #B1ADAA;
+    padding: 10px;
+}
+
 .step-title {
     width: 130px;
 }
