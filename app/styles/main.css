@@ -4,6 +4,13 @@ body {
     color: #333;
 }
 
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
 .track-box {
     margin: 50px auto 0 auto;
     width: 300px;
@@ -15,15 +22,14 @@ body {
     padding: 60px;
 }
 
-.hero-unit h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+.step-title {
+    width: 130px;
 }
 
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+.action {
+    display: block;
+    width: 135px;
 }
+
+
+
