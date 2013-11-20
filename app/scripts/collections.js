@@ -5,7 +5,18 @@ StepsCollection = Parse.Collection.extend ({
   model: Step,
 
   initialize: function(){
-    console.log('Collection instantiated')
+    console.log('steps collection instantiated')
+  },
+
+}),
+
+TrackCollection = Parse.Collection.extend ({
+
+  model: Track,
+
+  initialize: function() {
+    console.log('track collection instantiated')
+
   },
 
 })

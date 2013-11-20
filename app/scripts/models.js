@@ -8,4 +8,14 @@ Step = Parse.Object.extend ({
    
   },
 
+}),
+
+Track = Parse.Object.extend({
+
+  className: "Track",
+
+  initialize: function(){
+
+  },
+
 })

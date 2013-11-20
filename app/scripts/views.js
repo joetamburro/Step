@@ -1,11 +1,12 @@
 console.log('hello views script')
 
-TrackView = Backbone.View.extend({
+CreateTrackView = Backbone.View.extend({
 
-  template: _.template( $('#track-view-template').text() ),
+  template: _.template( $('#create-track-view-template').text() ),
 
   events: {
-    "click .add-step" : "addStep",
+    "click  .add-step"  : "addStep",
+    "click    .tracks-button"  : "yourTracks",
   },
 
   initialize: function() {
@@ -19,6 +20,10 @@ TrackView = Backbone.View.extend({
 
   addStep: function(){
     new StepView();
+  },
+
+  yourTracks: function () {
+    new YourTracksView();
   },
 
 }),
@@ -42,9 +47,28 @@ StepView = Backbone.View.extend ({
     this.$el.append( this.template({item: this.model }) )
   },
 
-
   deleteStep: function () {
     this.remove()
   },
+
+}),
+
+YourTracksView = Backbone.View.extend({
+
+  template: _.template( $('#your-tracks-template').text() ), 
+
+  initialize: function () {
+    $('.track-box').hide('');
+    $('.container').append(this.el);
+    this.render();
+  },
+
+  render: function () {
+    // this.$el.attr('href', '#/yourtracks');
+    this.$el.append( this.template({item: this.model }) );
+  },
+
+
+
 
 })

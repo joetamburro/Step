@@ -4,6 +4,11 @@ body {
     color: #333;
 }
 
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
@@ -42,6 +47,5 @@ body {
     display: block;
     width: 160px;
 }
-
 
 
