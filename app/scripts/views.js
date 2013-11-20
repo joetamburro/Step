@@ -58,7 +58,7 @@ YourTracksView = Backbone.View.extend({
   template: _.template( $('#your-tracks-template').text() ), 
 
   initialize: function () {
-    $('.track-box').hide('');
+    $('.track-box').hide();
     $('.container').append(this.el);
     this.render();
   },
