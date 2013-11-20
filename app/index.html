@@ -17,6 +17,7 @@
         <script src="bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
         <script src="http://www.parsecdn.com/js/parse-1.2.13.min.js"></script>
+
     </head>
     <body>
         <!--[if lt IE 10]>
@@ -44,8 +45,10 @@
                 
                 <input class="step-title" placeholder="Step Title">
                 <select class="action">
-                    <option></option>
-
+                    <option value="" disabled selected>Choose an action</option>
+                    <option value="1">Schedule an interview</option>
+                    <option value="2">Send a form/email</option>
+                    <option value="3">Accept/Reject</option>
                 </select>
 
                 <button class="delete-step">Delete Step</button>
@@ -61,6 +64,7 @@
         </script>
         <script src="bower_components/underscore/underscore.js"></script>
         <script src="bower_components/backbone/backbone.js"></script>
+        // <script type="text/javascript" src="chosen_v1.0.0/chosen.jquery.min.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
