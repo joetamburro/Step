@@ -5,8 +5,8 @@ CreateTrackView = Backbone.View.extend({
   template: _.template( $('#create-track-view-template').text() ),
 
   events: {
-    "click  .add-step"  : "addStep",
-    "click    .tracks-button"  : "yourTracks",
+    "click  .add-step"       : "addStep",
+    "click  .tracks-button"  : "yourTracks",
   },
 
   initialize: function() {
@@ -49,6 +49,10 @@ StepView = Backbone.View.extend ({
 
   deleteStep: function () {
     this.remove()
+  },
+
+  saveSteps: function () {
+    // var StepsToBeSaved = 
   },
 
 }),
