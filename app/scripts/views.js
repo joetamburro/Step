@@ -52,7 +52,7 @@ StepView = Backbone.View.extend ({
   },
 
   saveSteps: function () {
-    // var StepsToBeSaved = 
+
   },
 
 }),
