@@ -23,7 +23,8 @@ CreateTrackView = Backbone.View.extend({
   },
 
   yourTracks: function () {
-    new YourTracksView();
+    // on click links to router for '#/yourtracks' and creates new YourTracksView
+    window.location.href = '#/yourtracks'
   },
 
 }),
@@ -52,7 +53,8 @@ StepView = Backbone.View.extend ({
   },
 
   saveSteps: function () {
-
+    // var stepCollection = new StepsCollection()
+    // var 
   },
 
 }),
@@ -68,7 +70,6 @@ YourTracksView = Backbone.View.extend({
   },
 
   render: function () {
-    // this.$el.attr('href', '#/yourtracks');
     this.$el.append( this.template({item: this.model }) );
   },
 

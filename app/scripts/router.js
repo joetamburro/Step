@@ -17,7 +17,7 @@ AppRouter = Backbone.Router.extend ({
   },
 
   yourTracks: function() {
-  
+  new YourTracksView()
   },
 
 })
