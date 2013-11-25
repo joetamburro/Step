@@ -15,7 +15,7 @@ AppRouter = Backbone.Router.extend ({
 
   loginScreen: function () {
     $('.track-box').html('')
-    new LoginView();
+    new SignupView();
   },
 
   createTrack: function(){

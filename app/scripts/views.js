@@ -1,8 +1,8 @@
 console.log('hello views script')
 
-LoginView = Backbone.View.extend({
+SignupView = Backbone.View.extend({
 
-  template: _.template( $('#login-view-template').text() ),
+  template: _.template( $('#signup-view-template').text() ),
 
   events: {
     "click .submit-user"    : "submitUser",
@@ -18,7 +18,29 @@ LoginView = Backbone.View.extend({
   },
 
   submitUser: function () {
+
+    var user = new Parse.User();
+
+    var username = $('.username').val();
+    var password = $('.password').val();
+    var email = $('.email').val();
+
+    user.set("username", username);
+    user.set("password", password);
+    user.set("email", email);
+     
+    user.signUp(null, {
+      success: function(user) {
+        // Hooray! Let them use the app now.
+        window.confirm("Confirm submission")
     window.location.href = '#/createtrack'
+      },
+      error: function(user, error) {
+        // Show the error message somewhere and let the user try again.
+        alert("Error: " + error.code + " " + error.message);
+      }
+    });
+
   },
 
 }),

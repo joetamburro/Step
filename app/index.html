@@ -33,10 +33,11 @@
         </div>
 
         <!-- ************** TEMPLATES  ***************-->
-        <script type="text/template" id="login-view-template">
-            <h2>login</h2>
+        <script type="text/template" id="signup-view-template">
+            <h2>Sign up</h2>
             <input class="username" placeholder="Enter Username">
-            <input class="password" placeholder="Enter Password">
+            <input class="password" type ="password" placeholder="Enter Password">
+            <input class="email" placeholder="Enter Email">
             <button class="submit-user">Submit</button>
         </script>
 
@@ -101,6 +102,7 @@
         </script>
 
         <!-- build:js scripts/main.js -->
+        <script src="scripts/users.js"></script>
         <script src="scripts/views.js"></script>
         <script src="scripts/models.js"></script>
         <script src="scripts/collections.js"></script>
