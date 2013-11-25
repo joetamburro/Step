@@ -1,5 +1,24 @@
 console.log('hello views script')
 
+// LoginView = Backbone.View.Extend({
+
+  // template: _.template( $('#login-view-template').text() ),
+
+  // events: {
+
+  // },
+
+  // // initialize: function () {
+
+  // // },
+
+  // // render: function () {
+
+  // // },
+
+// }),
+
+
 CreateTrackView = Backbone.View.extend({
 
   template: _.template( $('#create-track-view-template').text() ),
