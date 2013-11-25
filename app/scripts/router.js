@@ -3,23 +3,29 @@ console.log('hello router script')
 AppRouter = Backbone.Router.extend ({
 
   initialize: function(){
-    this.items = new StepsCollection()
+    // this.items = new StepsCollection()
   },
 
   routes: {
-    ""                    : "createTrack",
-    "home"                : "createTrack",
+    ""                    : "loginScreen",
+    "home"                : "loginScreen",
+    "createtrack"         : "createTrack",
     "yourtracks"          : "yourTracks",
   },
 
+  loginScreen: function () {
+    $('.track-box').html('')
+    new LoginView();
+  },
+
   createTrack: function(){
-    // $('.track-box').html('');
+    $('.track-box').html('');
     new CreateTrackView();
     new StepView();
   },
 
   yourTracks: function() {
-    // $('.track-box').html('');
+  $('.track-box').html('');
   new YourTracksView()
   },
 

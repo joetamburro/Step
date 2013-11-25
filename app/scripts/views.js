@@ -1,27 +1,34 @@
 console.log('hello views script')
 
-// LoginView = Backbone.View.Extend({
+LoginView = Backbone.View.extend({
 
-  // template: _.template( $('#login-view-template').text() ),
+  template: _.template( $('#login-view-template').text() ),
 
-  // events: {
+  events: {
+    "click .submit-user"    : "submitUser",
+  },
 
-  // },
+  initialize: function () {
+    $('.track-box').append(this.el);
+    this.render();
+  },
 
-  // // initialize: function () {
+  render: function () {
+    this.$el.append( this.template({item: this.model }) )
+  },
 
-  // // },
+  submitUser: function () {
+    window.location.href = '#/createtrack'
+  },
 
-  // // render: function () {
-
-  // // },
-
-// }),
+}),
 
 
 CreateTrackView = Backbone.View.extend({
 
   template: _.template( $('#create-track-view-template').text() ),
+
+  className: "step-buttons",
 
   events: {
     "click  .add-step"       : "addStep",
@@ -31,7 +38,7 @@ CreateTrackView = Backbone.View.extend({
   initialize: function() {
     // $('.track-box').html('');
 
-    $('.add-holder').append(this.el);
+    $('.track-box').append(this.el);
     this.render();
   },
 
@@ -87,16 +94,13 @@ YourTracksView = Backbone.View.extend({
   template: _.template( $('#your-tracks-template').text() ), 
 
   initialize: function () {
-    // $('.track-box').html('');
-    $('.container').append(this.el);
+    $('.track-box').append(this.el);
     this.render();
   },
 
   render: function () {
     this.$el.append( this.template({item: this.model }) );
   },
-
-
 
 
 })
