@@ -33,7 +33,7 @@ SignupView = Backbone.View.extend({
       success: function(user) {
         // Hooray! Let them use the app now.
         window.confirm("Confirm submission")
-    window.location.href = '#/createtrack'
+        window.location.href = '#/createtrack'
       },
       error: function(user, error) {
         // Show the error message somewhere and let the user try again.
@@ -54,12 +54,11 @@ CreateTrackView = Backbone.View.extend({
 
   events: {
     "click  .add-step"       : "addStep",
-    "click  .tracks-button"  : "yourTracks",
+    "click  .save-steps"     : "saveSteps",
+
   },
 
   initialize: function() {
-    // $('.track-box').html('');
-
     $('.track-box').append(this.el);
     this.render();
   },
@@ -69,14 +68,13 @@ CreateTrackView = Backbone.View.extend({
   },
 
   addStep: function(){
-    // $('.track-box').html('');
-    
+    // creates new step view to add another step
     new StepView();
   },
 
-  yourTracks: function () {
-    // on click links to router for '#/yourtracks' and creates new YourTracksView
-    window.location.href = '#/yourtracks'
+  saveSteps: function () {
+    var steptitle = $('.step-title').val();
+    var action = $('.action :selected').val();
   },
 
 }),
@@ -102,11 +100,6 @@ StepView = Backbone.View.extend ({
 
   deleteStep: function () {
     this.remove()
-  },
-
-  saveSteps: function () {
-    // var stepCollection = new StepsCollection()
-    // var 
   },
 
 }),
