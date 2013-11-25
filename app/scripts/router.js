@@ -8,15 +8,18 @@ AppRouter = Backbone.Router.extend ({
 
   routes: {
     ""                    : "createTrack",
+    "home"                : "createTrack",
     "yourtracks"          : "yourTracks",
   },
 
   createTrack: function(){
+    // $('.track-box').html('');
     new CreateTrackView();
     new StepView();
   },
 
   yourTracks: function() {
+    // $('.track-box').html('');
   new YourTracksView()
   },
 

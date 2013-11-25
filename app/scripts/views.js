@@ -10,6 +10,8 @@ CreateTrackView = Backbone.View.extend({
   },
 
   initialize: function() {
+    // $('.track-box').html('');
+
     $('.add-holder').append(this.el);
     this.render();
   },
@@ -19,6 +21,8 @@ CreateTrackView = Backbone.View.extend({
   },
 
   addStep: function(){
+    // $('.track-box').html('');
+    
     new StepView();
   },
 
@@ -64,7 +68,7 @@ YourTracksView = Backbone.View.extend({
   template: _.template( $('#your-tracks-template').text() ), 
 
   initialize: function () {
-    $('.track-box').hide();
+    // $('.track-box').html('');
     $('.container').append(this.el);
     this.render();
   },
