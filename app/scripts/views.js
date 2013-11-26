@@ -32,7 +32,6 @@ SignupView = Backbone.View.extend({
     user.signUp(null, {
       success: function(user) {
         // Hooray! Let them use the app now.
-        window.confirm("Confirm submission")
         window.location.href = '#/createtrack'
       },
       error: function(user, error) {
@@ -73,17 +72,27 @@ CreateTrackView = Backbone.View.extend({
   },
 
   saveSteps: function () {
-      var stepTitles = []
-      $('.step-title').each(function(){
-              stepTitles.push($(this).val())
-      });
-      console.log(stepTitles);
 
-      var stepActions = []
-      $('.action').each(function(){
-          stepActions.push($(this).val())
-      });
-      console.log(stepActions);
+    var stepTitles = []
+    $('.step-title').each(function(){
+            stepTitles.push($(this).val())
+    });
+    console.log(stepTitles)
+
+    var stepActions = []
+    $('.action').each(function(){
+        stepActions.push($(this).val())
+    });
+    console.log(stepActions) 
+      
+    var trackarray = _.zip(stepTitles,stepActions)
+    console.log(trackarray)
+
+    var track = _.object(trackarray)
+    console.log(track)
+    
+
+
   },
 
 }),
