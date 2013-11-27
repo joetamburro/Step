@@ -73,23 +73,24 @@ CreateTrackView = Backbone.View.extend({
 
   saveSteps: function () {
 
-    var stepTitles = []
-    $('.step-title').each(function(){
-            stepTitles.push($(this).val())
-    });
-    console.log(stepTitles)
+    // var stepTitles = []
+    // $('.step-title').each(function(){
+    //         stepTitles.push($(this).val())
+    // });
+    // console.log(stepTitles)
 
-    var stepActions = []
-    $('.action').each(function(){
-        stepActions.push($(this).val())
-    });
-    console.log(stepActions) 
+    // model.setUser({"title": "img"});
+    // var stepActions = []
+    // $('.action').each(function(){
+    //     stepActions.push($(this).val())
+    // });
+    // console.log(stepActions) 
       
-    var trackarray = _.zip(stepTitles,stepActions)
-    console.log(trackarray)
+    // var trackarray = _.zip(stepTitles,stepActions)
+    // console.log(trackarray)
 
-    var track = _.object(trackarray)
-    console.log(track)
+    // var track = _.object(trackarray)
+    // console.log(track)
     
 
 
