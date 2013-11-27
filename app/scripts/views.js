@@ -73,7 +73,8 @@ CreateTrackView = Backbone.View.extend({
 
   saveSteps: function () {
 
-    // var stepTitles = []
+    // var collection = new StepsCollection();
+
     // $('.step-title').each(function(){
     //         stepTitles.push($(this).val())
     // });
