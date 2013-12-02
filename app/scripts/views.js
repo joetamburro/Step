@@ -53,8 +53,7 @@ CreateTrackView = Backbone.View.extend({
 
   events: {
     "click  .add-step"       : "addStep",
-    "click  .save-steps"     : "saveSteps",
-
+    "click  .save-track"     : "saveTrack",
   },
 
   initialize: function() {
@@ -71,16 +70,53 @@ CreateTrackView = Backbone.View.extend({
     new StepView();
   },
 
-  saveSteps: function () {
+  saveTrack: function () {
 
-    // var collection = new StepsCollection();
+    var newTrack = new Track();
+    var trackName = $('.track-name').val();
+
+    // newTrack.set("id", );
+    newTrack.set("name",  trackName);
+    // newTrack.set("settings", );
+    // newTrack.set("user_id", );
+     
+    newTrack.save(null, {
+      success: function(newTrack) {
+        // Execute any logic that should take place after the object is saved.
+        alert('New object created with objectId: ' + newTrack.id);
+      },
+      error: function(newTrack, error) {
+        // Execute any logic that should take place if the save fails.
+        // error is a Parse.Error with an error code and description.
+        alert('Failed to create new object, with error code: ' + error.description);
+      }
+    });
+
+
+    // var steps = new StepsCollection("Step");
+    // this.model.set({
+    //   // "step-number": this.$el.find('').val(),
+    //   "title": this.$el.find('.step-title').val(),
+    //   "action": this.$el.find('.action').val()
+    // });
+    // var testTrack = new Track();
+    // var steps = $('.step-item').each(function(){
+    //   this.model.set({
+    //     "title":  $('.step-title').val(),
+    //     "action": $('.action').val()
+    //   });
+    // });
+    // console.log(steps)
+  
+// }
+
+    // var stepTitles = [];
 
     // $('.step-title').each(function(){
     //         stepTitles.push($(this).val())
     // });
     // console.log(stepTitles)
 
-    // model.setUser({"title": "img"});
     // var stepActions = []
     // $('.action').each(function(){
     //     stepActions.push($(this).val())
@@ -92,7 +128,8 @@ CreateTrackView = Backbone.View.extend({
 
     // var track = _.object(trackarray)
     // console.log(track)
-    
+
+    // var firstTrack = new Track();
 
 
   },

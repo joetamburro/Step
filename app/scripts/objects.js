@@ -2,9 +2,9 @@ console.log('hello models script')
 
 Step = Parse.Object.extend ({
   defaults: {
-    "step-number" : "n/a",
-    "title"       : "n/a", 
-    "action"      : "n/a" 
+    "step-number" : "",
+    "title"       : "", 
+    "action"      : "" 
   },
 
   className: "Step",
@@ -16,6 +16,12 @@ Step = Parse.Object.extend ({
 }),
 
 Track = Parse.Object.extend({
+  defaults: {
+    "id"        : "",
+    "name"      : "", 
+    "settings"  : "",
+    "user_id"    : "",
+  },
 
   className: "Track",
 
