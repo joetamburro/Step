@@ -71,6 +71,8 @@ CreateTrackView = Backbone.View.extend({
   },
 
   addStep: function(){
+    var addedStep = new Step;
+    this.newSteps.push(addedStep)
     // creates new step view to add another step
     new StepView();
 
