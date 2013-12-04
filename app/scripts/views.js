@@ -58,6 +58,8 @@ CreateTrackView = Backbone.View.extend({
 
   initialize: function() {
     this.newSteps = [];
+    var step = new Step;
+    this.newSteps.push(step)
     console.log(this.newSteps)
     $('.track-box').append(this.el);
     this.newTrack = new Track();
@@ -70,14 +72,11 @@ CreateTrackView = Backbone.View.extend({
 
   addStep: function(){
     // creates new step view to add another step
-    var step = new Step;
-    this.newSteps.push(step)
     new StepView();
 
   },
 
   finalizeSaveTrack: function(){
-    // if (validateSave)
       this.newTrack.save(null, {
         success: function(newTrack) {
           // Execute any logic that should take place after the object is saved.
