@@ -32,7 +32,15 @@
 
         </div>
 
-        <!-- ************** TEMPLATES  ***************-->
+    <div class="modal">
+      <div class="modal-box">
+        <h1>Warning</h1><p>You are missing some step titles.</p>
+        <div class="Button-2">CLOSE</div>
+      </div>
+    </div>
+
+<!-- ************************* TEMPLATES  *********************************-->
+
         <script type="text/template" id="signup-view-template">
             <h2>Sign up</h2>
             <input class="username" placeholder="Enter Username">
@@ -47,7 +55,7 @@
             <a href="#/yourtracks"><span class="tracks-button">Your Tracks</span><a/>
             <button class="add-step">Add Step</button>
             <button class="save-track">Save Track</button>
-            <input class="track-name" placeholder="Track Name">
+            <input class="track-name" value="cool track name" placeholder="Track Name">
         
         </script>
 
@@ -55,19 +63,16 @@
            
             <div class="step-box">
                 
-                <input class="step-title" placeholder="Step Title">
+                <input class="step-title" value="cool title" placeholder="Step Title">
 
                 <select class="action">
-                    <option value="" disabled selected>Choose an action</option>
+                    <option value="">Choose an action</option>
                     <option value="100">Schedule an interview</option>
                     <option value="200">Send a form/email</option>
                     <option value="300">Accept/Reject</option>
                 </select>
 
                 <button class="delete-step">Delete Step</button>
-  
-
-    
                 
             </div>
             
@@ -79,7 +84,7 @@
 
         </script>
 
-
+<!-- ************************ END TEMPLATES ******************************* -->
 
 
         <!-- build:js scripts/vendor.js -->
