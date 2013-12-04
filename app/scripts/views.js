@@ -58,8 +58,8 @@ CreateTrackView = Backbone.View.extend({
 
   initialize: function() {
     this.newSteps = [];
-    var step = new Step;
-    this.newSteps.push(step)
+    var firstStep = new Step;
+    this.newSteps.push(firstStep)
     console.log(this.newSteps)
     $('.track-box').append(this.el);
     this.newTrack = new Track();
