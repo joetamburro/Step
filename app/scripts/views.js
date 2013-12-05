@@ -157,10 +157,12 @@ StepView = Backbone.View.extend ({
 
 YourTracksView = Backbone.View.extend({
 
+  className: 'sidebar',
+
   template: _.template( $('#your-tracks-template').text() ), 
 
   initialize: function () {
-    $('.track-box').append(this.el);
+    $('.viewport').append(this.el);
     this.render();
   },
 
