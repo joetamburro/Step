@@ -4,6 +4,8 @@ body, html {
     color: #333;
     margin: 0;
     height: 100%;
+    width: 100%;
+    display: inline-block;
 }
 
 .container {
@@ -17,6 +19,11 @@ body, html {
     color: #000;
     padding: 0.2em 0;
 }
+
+.header {
+  border-bottom: 1px solid #bbb;
+}
+
 .main-view {
     display: inline-block;
 }
@@ -52,11 +59,23 @@ body, html {
     width: 160px;
 }
 
+.view {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
 .sidebar {
     width: 200px;
     height: 100%;
     background-color: #072a3b;
     display: inline-block;
+}
+
+.main-view {
+  width: 760px;
+  height: 100%;
+  display: inline-block;
+  border: 1px solid grey;
 }
 
 .step-app {
