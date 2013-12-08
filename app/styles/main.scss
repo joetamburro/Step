@@ -72,7 +72,7 @@ body, html {
 }
 
 .main-view {
-  width: 760px;
+  width: 100%;
   height: 100%;
   display: inline-block;
   border: 1px solid grey;
@@ -85,6 +85,8 @@ body, html {
     background: #041620;
 }
 .step-app h4 {
+    display: inline;
+    position: absolute;
     color: white;
     margin-top: 0;
 }
