@@ -84,6 +84,7 @@ CreateTrackView = Backbone.View.extend({
           // Execute any logic that should take place after the object is saved.
           // save steps and set 
           alert('New object created with objectId: ' + newTrack.id);
+          window.location.href = "#/yourtracks"
         },
         error: function(newTrack, error) {
           // Execute any logic that should take place if the save fails.

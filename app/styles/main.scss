@@ -71,8 +71,13 @@ body, html {
     display: inline-block;
 }
 
-.main-view {
+.sidebar-box {
+  height: 40px;
   width: 100%;
+  border-bottom: 1px solid grey;
+}
+
+.main-view {
   height: 100%;
   display: inline-block;
   border: 1px solid grey;
