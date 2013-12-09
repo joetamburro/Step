@@ -163,7 +163,7 @@ YourTracksView = Backbone.View.extend({
   template: _.template( $('#your-tracks-template').text() ), 
 
   initialize: function () {
-    $('.track-box').append(this.el);
+    $('.track-window').append(this.el);
     this.render();
   },
 
@@ -171,6 +171,23 @@ YourTracksView = Backbone.View.extend({
     this.$el.append( this.template({item: this.model }) );
   },
 
+
+}),
+
+TrackView = Backbone.View.extend({
+
+  className: 'track',
+
+  template: _.template( $('#your-track-view-template').text() ),
+  
+  initialize: function () {
+    $('.track-window').append(this.el);
+    this.render();
+  },
+
+  render: function () {
+    this.$el.append( this.template({item: this.model }) );
+  },
 
 })
 

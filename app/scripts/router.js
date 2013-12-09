@@ -3,7 +3,7 @@ console.log('hello router script')
 AppRouter = Backbone.Router.extend ({
 
   initialize: function(){
-    // this.items = new StepsCollection()
+    
   },
 
   routes: {
@@ -27,8 +27,8 @@ AppRouter = Backbone.Router.extend ({
 
   yourTracks: function() {
   $('.track-box').html('');
-  // $('.main-view').html('');
   new YourTracksView();
+  new TrackView();
   },
 
 })
