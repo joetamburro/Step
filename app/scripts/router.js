@@ -28,7 +28,7 @@ AppRouter = Backbone.Router.extend ({
   yourTracks: function() {
   $('.track-box').html('');
   new YourTracksView();
-  new TrackView();
+  // new TrackView();
   },
 
 })

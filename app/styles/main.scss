@@ -11,11 +11,6 @@ body, html {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-.wrapper {
-    width: 1200px;
-    margin: 0 auto;
-}
-
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
@@ -58,13 +53,18 @@ body, html {
   margin: 0 auto;
 }*/
 
+
+.yourtracks {
+  height: 100%;
+}
+
 .yourtracks-header {
   background-color: #FFF;
   height: 82px;
   width: 100%;
   padding: 0 20px;
 
-  h2 {
+  h1 {
     display: inline-block;
   }
 
@@ -73,12 +73,17 @@ body, html {
 .track {
   border: 1px solid black;
   height: 100px;
-  width: 600px;
+  width: 800px;
+  margin-left: 20px;
+  margin-top: 20px;
 }
 
 #search-track {
   display: inline-block;
   width: 178px;
+  position: relative;
+  bottom: 5px;
+  left: 120px;
 }
 
 .add-holder {
