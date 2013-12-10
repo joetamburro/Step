@@ -57,6 +57,7 @@ CreateTrackView = Backbone.View.extend({
   },
 
   initialize: function() {
+    $('.track-window').html('')
     this.newSteps = [];
     var firstStep = new Step;
     this.newSteps.push(firstStep)
