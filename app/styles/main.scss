@@ -80,6 +80,52 @@ body {
   width: 1000px;
   margin-left: 43px;
   margin-top: 30px;
+  border-radius: 4px;
+}
+
+.track-main {
+  display: inline-block;
+  height: 85px;
+  width: 100%;
+  border-bottom: 1px solid #D8D8D8;
+}
+
+.track-main {
+
+  h2 {
+    font-weight: 400;
+    color: #0884C0;
+    margin-left: 20px;
+    margin-bottom: 0;
+  }
+}
+
+.track-meta {
+  display: inline-block;
+
+  h6 {
+    display: inline;
+    margin-left: 20px;
+  }
+}
+
+.track-bottom {
+  display: inline-block;
+  height: 45px;
+  width: 100%;
+}
+
+.class-status {
+  display: inline-block;
+  margin-left: 20px;
+}
+.class-applicants {
+  display: inline-block;
+  margin-left: 85px;
+}
+.class-accepted {
+  display: inline-block;
+  margin-left: 85px;
 }
 
 #search-track {
