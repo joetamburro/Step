@@ -178,7 +178,14 @@ body {
 .sidebar-box {
   height: 53px;
   width: 100%;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #173648;
+
+    h3 {
+      display: inline;
+      position: absolute;
+      color: #FFF;
+      margin: 14px 0 0 -14px;
+    }
 }
 
 .main-view {
@@ -196,9 +203,8 @@ body {
     h2 {
       display: inline;
       position: absolute;
-      color: white;
-      margin-top: 6px;
-      margin-bottom: 0;
+      color: #FFF;
+      margin: 8px 0 0 -14px;
     }
 }
 .step-triangle {
@@ -318,9 +324,12 @@ body {
 
 /* symbolset */
 
-.ss-pixels {
+.ss-pixels, .ss-barchart,
+.ss-share, .ss-users,
+.ss-desktop {
   display: inline-block;
+  font-size: 22px;
   color: #187CA0;
-  margin-left: 20px;
-  margin-top: 15px;
+  margin-left: 15px;
+  margin-top: 12px;
 }
