@@ -1,14 +1,15 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600);
+html {
+  height: 100%;
+  padding: 0;
+}
 
-body, html {
-    background: #fafafa;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
-    margin: 0;
-    height: 100%;
-    width: 100%;
-    display: inline-block;
+body {
     font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    background: #fafafa;
+    padding: 0;
+    height: 100%;
 }
 
 .browsehappy {
@@ -22,11 +23,11 @@ body, html {
   border-bottom: 1px solid #bbb;
 }
 
-.main-view {
+/*.main-view {
     display: inline-block;
     position: relative;
     border: 1px solid blue;
-}
+}*/
 
 .track-box {
     position: absolute;
@@ -60,22 +61,25 @@ body, html {
 
 .yourtracks-header {
   background-color: #FFF;
-  height: 82px;
+  height: 105px;
   width: 100%;
-  padding: 0 20px;
+  padding: 0 30px;
 
   h1 {
     display: inline-block;
+    font-size: 60px;
+    line-height: 20px;
+    color: #06303E;
   }
 
 }
 
 .track {
-  border: 1px solid black;
-  height: 100px;
-  width: 800px;
-  margin-left: 20px;
-  margin-top: 20px;
+  border: 1px solid #D8D8D8;
+  height: 140px;
+  width: 1000px;
+  margin-left: 43px;
+  margin-top: 30px;
 }
 
 #search-track {
@@ -113,14 +117,14 @@ body, html {
   background-color: #f5f6f7;
 }
 .sidebar {
-    width: 200px;
+    width: 248px;
     height: 100%;
     background-color: #072a3b;
     display: inline-block;
 }
 
 .sidebar-box {
-  height: 40px;
+  height: 53px;
   width: 100%;
   border-bottom: 1px solid grey;
 }
@@ -132,8 +136,8 @@ body, html {
 }
 
 .step-app {
-    width: 200px;
-    height: 40px;
+    width: 248px;
+    height: 50px;
     position: relative;
     background: #041620;
 }
