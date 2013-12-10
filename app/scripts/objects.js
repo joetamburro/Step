@@ -18,7 +18,7 @@ Step = Parse.Object.extend ({
 Track = Parse.Object.extend({
   defaults: {
     "id"        : "",
-    "name"      : "", 
+    "trackName"      : "", 
     "settings"  : "",
     "user_id"    : "",
   },

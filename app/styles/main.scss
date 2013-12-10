@@ -61,7 +61,7 @@ body {
 
 .yourtracks-header {
   background-color: #FFF;
-  height: 105px;
+  height: 108px;
   width: 100%;
   padding: 0 30px;
 
@@ -118,23 +118,28 @@ body {
 .class-status {
   display: inline-block;
   margin-left: 20px;
+  color: #06303E;
 }
+
 .class-applicants {
   display: inline-block;
   margin-left: 85px;
+  color: #06303E;
 }
+
 .class-accepted {
   display: inline-block;
   margin-left: 85px;
+  color: #06303E;
 }
 
 #search-track {
   display: inline-block;
+  margin-left: 55px;
   width: 178px;
   height: 32px;
   position: relative;
   bottom: 12px;
-  left: 120px;
 }
 
 .add-holder {
@@ -188,11 +193,12 @@ body {
     position: relative;
     background: #041620;
 
-    h4 {
+    h2 {
       display: inline;
       position: absolute;
       color: white;
-      margin-top: 0;
+      margin-top: 6px;
+      margin-bottom: 0;
     }
 }
 .step-triangle {
@@ -310,3 +316,11 @@ body {
 
 
 
+/* symbolset */
+
+.ss-pixels {
+  display: inline-block;
+  color: #187CA0;
+  margin-left: 20px;
+  margin-top: 15px;
+}

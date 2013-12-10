@@ -100,7 +100,7 @@ CreateTrackView = Backbone.View.extend({
     var trackName = $('.track-name').val();
 
     // newTrack.set("id", );
-    this.newTrack.set("name",  trackName);
+    this.newTrack.set("trackName",  trackName);
     // newTrack.set("settings", );
     // newTrack.set("user_id", );
 
