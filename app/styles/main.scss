@@ -1,4 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600);
+
+$sidebar-width: 248px;
+
 html {
   height: 100%;
   padding: 0;
@@ -21,10 +24,11 @@ body {
 
 .header {
   border-bottom: 1px solid #bbb;
+  background: #F5F6F7;
 }
 
 .step-app {
-    width: 248px;
+    width: $sidebar-width;
     height: 50px;
     position: relative;
     background: #041620;
@@ -59,42 +63,51 @@ body {
 }
 
 .track-window {
+/*  position: absolute;
+  left: $sidebar-width;
+  right: 0;
+*/
   display: inline-block;
   height: 100%;
-  position: absolute;
+  vertical-align: top;
+  background: #fafafa;
 }
 
-/*.track-window-container {
-  width: 800px;
-  height: 100%;
-  border: 1px solid black;
-  margin: 0 auto;
-}*/
-
-
 .yourtracks {
-  height: 100%;
+  background: #F5F6F7;
 }
 
 .yourtracks-header {
   background-color: #FFF;
   height: 108px;
-  width: 100%;
-  padding: 0 43px;
+  /*padding: 0 43px;*/
 
   h1 {
     display: inline-block;
     font-size: 60px;
     line-height: 20px;
     color: #06303E;
+    margin-left: 40px;
+    position: relative;
+    z-index: 1;
   }
 
 }
 
+.yourtracks-header:after {
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: inherit;
+  content: " ";
+  background: #fff;
+  z-index: 0;
+  }
+
 #search-track {
   display: inline-block;
   margin-left: 55px;
-  width: 184px;
+  width: 206px;
   height: 32px;
   position: relative;
   bottom: 12px;
@@ -109,7 +122,7 @@ body {
   bottom: -2px;
   right: 4px;
   height: 34px;
-  width: 24px;
+  width: 38px;
   border-radius: 0px 4px 4px 0px;
   border: 1px solid #D8D8D8;
 }
@@ -121,6 +134,7 @@ body {
   margin-left: 43px;
   margin-top: 30px;
   border-radius: 4px;
+  background: #fff;
 }
 
 .track-main {
@@ -223,19 +237,23 @@ body {
 }
 
 .view {
+  position: relative;
   display: inline-block;
-  height: 100%;
   width: 100%;
   background-color: #f5f6f7;
 }
+
 .sidebar {
-    width: 248px;
-    height: 100%;
-    background-color: #072a3b;
-    display: inline-block;
+  vertical-align: top;
+  width: $sidebar-width;
+  background-color: #072a3b;
+  display: inline-block;
+  z-index: 1;
+  position: relative;
 }
 
 .sidebar-box {
+
   height: 53px;
   width: 100%;
   border-bottom: 1px solid #173648;
@@ -363,6 +381,24 @@ body {
 
 /*************** END MODAL 8************************/
 
+/* buttons */
+
+.button {
+  height: 36px;
+  width: 74px;
+  color: #fff;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.new-button {
+  background-color: #1A93CA;
+  position: relative;
+  top: 2px;
+}
+
+
+
 
 
 /* symbolset */
@@ -398,4 +434,5 @@ body {
   position: absolute;
   top: 6px;
   left: 3px;
+  margin: 1px 0 0 8px;
 }

@@ -171,6 +171,9 @@ YourTracksView = Backbone.View.extend({
   render: function () {
     this.$el.append( this.template({item: this.model }) );
     new TrackView();
+    new TrackView();
+    new TrackView();
+    new TrackView();
   },
 
 
