@@ -10,9 +10,10 @@ html {
 body {
     font-family: 'Source Sans Pro', sans-serif;
     margin: 0;
-    background: #fafafa;
+    /*background: #fafafa;*/
     padding: 0;
     height: 100%;
+    background: #F5F6F7 url(../images/sidebar.png) top left repeat-y;
 }
 
 .browsehappy {
@@ -71,6 +72,7 @@ body {
   height: 100%;
   vertical-align: top;
   background: #fafafa;
+  margin-left: -3px;
 }
 
 .yourtracks {
@@ -113,6 +115,7 @@ body {
   bottom: 12px;
   border: 1px solid #D8D8D8;
   border-radius: 4px 0px 0px 4px;
+  z-index: 1;
 }
 
 .search-icon {
@@ -125,6 +128,7 @@ body {
   width: 38px;
   border-radius: 0px 4px 4px 0px;
   border: 1px solid #D8D8D8;
+  z-index: 1;
 }
 
 .track {
@@ -240,7 +244,8 @@ body {
   position: relative;
   display: inline-block;
   width: 100%;
-  background-color: #f5f6f7;
+  height: 100%;
+  /*background-color: #f5f6f7;*/
 }
 
 .sidebar {
@@ -395,6 +400,7 @@ body {
   background-color: #1A93CA;
   position: relative;
   top: 2px;
+  z-index: 1;
 }
 
 
