@@ -9,9 +9,9 @@ Step = Parse.Object.extend ({
 
   className: "Step",
 
-  // initialize: function(){
+  initialize: function(){
    
-  // },
+  },
 
 }),
 
@@ -25,8 +25,11 @@ Track = Parse.Object.extend({
 
   className: "Track",
 
-  // initialize: function(){
+  initialize: function(){
 
-  // },
+  },
+
+  idAttribute: "_id",
+
 
 })

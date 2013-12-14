@@ -170,10 +170,8 @@ YourTracksView = Backbone.View.extend({
 
   render: function () {
     this.$el.append( this.template({item: this.model }) );
-    new TrackView();
-    new TrackView();
-    new TrackView();
-    new TrackView();
+    // new TrackView();
+
   },
 
 
@@ -186,6 +184,7 @@ TrackView = Backbone.View.extend({
   template: _.template( $('#your-track-view-template').text() ),
   
   initialize: function () {
+    $('.main-view').html('');
     $('.yourtracks').append(this.el);
     this.render();
   },
