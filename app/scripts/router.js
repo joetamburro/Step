@@ -1,7 +1,7 @@
 console.log('hello router script')
 
 AppRouter = Backbone.Router.extend ({
-
+// when router init'd instantiate steps and tracks collections
   initialize: function(){
     this.steps = new StepsCollection();
     this.tracks = new TrackCollection();
@@ -34,6 +34,7 @@ AppRouter = Backbone.Router.extend ({
     // $('.main-view').html('');
     new YourTracksView();
 
+// fetching all tracks. 
     this.tracks.fetch({
       success: function(tracks){
         tracks.each(function(track){
