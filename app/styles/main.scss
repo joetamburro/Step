@@ -160,6 +160,14 @@ body {
   }
 }
 
+.track-main:hover {
+  cursor: pointer;
+
+  .ss-navigateright {
+    color: #239CCB;
+  }
+}
+
 .track-meta {
   display: inline-block;
 
@@ -180,6 +188,8 @@ body {
 
   h3 { 
     font-weight: 400;
+    display: inline-block;
+    margin-bottom: 8px;
   }
 }
 
@@ -193,12 +203,20 @@ body {
   display: inline-block;
   margin-left: 85px;
   color: #06303E;
+
+  span {
+    color: #239CCB;
+  }
 }
 
 .class-accepted {
   display: inline-block;
   margin-left: 85px;
   color: #06303E;
+
+  span {
+    color: #239CCB;
+  }
 }
 
 .steps-icon {
@@ -220,6 +238,16 @@ body {
     color: #06303E;
   }
 }
+
+.steps-icon:hover {
+    cursor: pointer;
+
+    p, i {
+      color:   #239CCB;
+    }
+
+}
+
 
 .add-holder {
     position: absolute;
@@ -456,4 +484,16 @@ body {
   top: 4px;
   left: 4px;
   font-size: 18px;
+}
+
+.ss-pixels {
+  margin-top: 11px;
+}
+
+.ss-barchart {
+  margin-top: 10px;
+}
+
+.ss-users {
+  margin-top: 13px;
 }
