@@ -170,11 +170,17 @@ body {
 
 .track-meta {
   display: inline-block;
+  color: #A5A6A8;
+  margin-left: 20px;
+  margin-right: 2px;
 
   h6 {
     display: inline;
-    margin-left: 20px;
   }
+}
+
+.divider {
+  margin-left: 2px;
 }
 
 .track-bottom {
@@ -189,7 +195,8 @@ body {
   h3 { 
     font-weight: 400;
     display: inline-block;
-    margin-bottom: 8px;
+    position: relative;
+    bottom: 4px;
   }
 }
 
@@ -197,6 +204,13 @@ body {
   display: inline-block;
   margin-left: 20px;
   color: #06303E;
+
+  i {
+    color: #239CCB;
+    position: relative;
+    bottom: 2px;
+    margin-right: 2px;
+  }
 }
 
 .class-applicants {
@@ -206,6 +220,9 @@ body {
 
   span {
     color: #239CCB;
+    position: relative;
+    bottom: 4px;
+    margin-right: 2px;
   }
 }
 
@@ -216,6 +233,9 @@ body {
 
   span {
     color: #239CCB;
+    position: relative;
+    bottom: 4px;
+    margin-right: 2px;
   }
 }
 
