@@ -24,7 +24,7 @@ body {
 }
 
 .header {
-  border-bottom: 1px solid #bbb;
+  /*border-bottom: 1px solid #bbb;*/
   background: #F5F6F7;
 }
 
@@ -304,6 +304,7 @@ body {
   display: inline-block;
   z-index: 1;
   position: relative;
+  border-top: 1px solid #173648;
 }
 
 .sidebar-box {
@@ -516,4 +517,13 @@ body {
 
 .ss-users {
   margin-top: 13px;
+}
+
+.ss-rewind {
+  border: 1px solid #124E68;
+  color: #124E68;
+  border-radius: 50%;
+  font-size: 16px;
+  padding: 4px 6px 0px 4px;
+  margin-left: 76px;
 }
