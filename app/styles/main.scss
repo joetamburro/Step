@@ -29,10 +29,11 @@ body {
 }
 
 .step-app {
-    width: $sidebar-width;
-    height: 50px;
-    position: relative;
-    background: #041620;
+  display: inline-block;
+  width: $sidebar-width;
+  height: 50px;
+  position: relative;
+  background: #041620;
 
     h2 {
       display: inline;
@@ -208,8 +209,9 @@ body {
   i {
     color: #239CCB;
     position: relative;
-    bottom: 2px;
+    bottom: -3px;
     margin-right: 2px;
+    font-size: 26px;
   }
 }
 
@@ -221,8 +223,9 @@ body {
   span {
     color: #239CCB;
     position: relative;
-    bottom: 4px;
+    bottom: 3px;
     margin-right: 2px;
+    font-size: 20px;
   }
 }
 
@@ -234,8 +237,9 @@ body {
   span {
     color: #239CCB;
     position: relative;
-    bottom: 4px;
+    bottom: 3px;
     margin-right: 2px;
+    font-size: 20px;
   }
 }
 
@@ -526,4 +530,11 @@ body {
   font-size: 16px;
   padding: 4px 6px 0px 4px;
   margin-left: 76px;
+  cursor: pointer;
+}
+
+/* BReadCrumbs */
+
+.rcrumbs {
+  display: inline-block;
 }
