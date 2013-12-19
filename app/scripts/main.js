@@ -1,16 +1,22 @@
 Parse.initialize("rFRxcDA5rl9aA5ze4Bi1Mrkx78ptWVVu4PUZo9kr", "3d2EM2hDuMATrmjdhCOViF3SPKFvKqoKq4mQ5jd8");
 
 $(document).ready(function(){
-  var visible = true
+  visible = true
 
   $('.ss-rewind').click(function(){
-    if (visible == true){
-      $('.sidebar').hide()
-      visible =false
-    } else {
-      $('.sidebar').show()
-      visible = true
-    } 
+    if (visible){
+      $('.sidebar').addClass('hidden')
+      // $('.sidebar').removeClass('visible')
+      $('.view').addClass('hide-view')
+      $('.view').removeClass('show-view')
+      visible = false
+    } else if (!visible) {
+        $('.sidebar').addClass('visible')
+        $('.sidebar').removeClass('hidden')
+        $('.view').addClass('show-view')
+        $('.view').removeClass('hide-view')
+        visible = true
+    }
   })
 })
 

@@ -298,6 +298,7 @@ body {
   position: relative;
   display: inline-block;
   width: 100%;
+  transition: 1s ease;
   /*background-color: #f5f6f7;*/
 }
 
@@ -533,8 +534,27 @@ body {
   cursor: pointer;
 }
 
-/* BReadCrumbs */
+/* sidbar */
 
-.rcrumbs {
+.visible {
+  vertical-align: top;
+  width: $sidebar-width;
+  background-color: #072a3b;
   display: inline-block;
+  z-index: 1;
+  position: relative;
+  border-top: 1px solid #173648;
+  transition: 500s ease;
+}
+
+.hidden {
+  right: 284px;
+}
+
+.hide-view {
+  right: 284px;
+}
+
+.show-view {
+  right: 0px;
 }
