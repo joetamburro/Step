@@ -2,6 +2,8 @@ console.log('hello views script')
 
 SignupView = Backbone.View.extend({
 
+  className: 'sign-up',
+
   template: _.template( $('#signup-view-template').text() ),
 
   events: {
