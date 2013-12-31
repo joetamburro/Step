@@ -144,7 +144,7 @@ body {
 }
 
 .track-name {
-  /*height: 32px;*/
+  margin: 0 40px;
 }
 
 .track-main {
@@ -284,13 +284,16 @@ body {
 }
 
 .step-box {
-    /*border: 1px solid #B1ADAA;*/
+    border: 1px solid #B1ADAA;
     padding: 10px;
+    width: 300px;
+    border-radius: 4px;
+    margin: 15px 44px;
 }
 
 .step-title {
     width: 155px;
-    height: 32px;
+    /*height: 32px;*/
 }
 
 .action {
@@ -457,6 +460,10 @@ body {
   display: inline-block;
 }
 
+.button:focus {
+  outline: none;
+}
+
 .add-step, .save-track {
   background: #1A93CA;
   cursor: pointer;
@@ -465,6 +472,9 @@ body {
 .delete-step {
   background: #ED7952;
   cursor: pointer;
+  position: relative;
+  left: 36px;
+  bottom: 14px;
 }
 
 .new-button {
