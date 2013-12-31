@@ -143,6 +143,10 @@ body {
   background: #fff;
 }
 
+.track-name {
+  /*height: 32px;*/
+}
+
 .track-main {
   display: inline-block;
   height: 85px;
@@ -284,12 +288,13 @@ body {
     padding: 10px;
 }
 
-#step-title {
+.step-title {
     width: 155px;
+    height: 32px;
 }
 
-#action {
-    display: block;
+.action {
+    /*display: block;*/
     width: 160px;
 }
 
@@ -444,11 +449,22 @@ body {
 /* buttons */
 
 .button {
+  border: none;
   height: 36px;
   width: 74px;
   color: #fff;
   border-radius: 4px;
   display: inline-block;
+}
+
+.add-step, .save-track {
+  background: #1A93CA;
+  cursor: pointer;
+}
+
+.delete-step {
+  background: #ED7952;
+  cursor: pointer;
 }
 
 .new-button {
