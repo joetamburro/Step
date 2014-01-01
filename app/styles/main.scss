@@ -83,6 +83,7 @@ body {
 .yourtracks-header {
   background-color: #FFF;
   height: 108px;
+  margin-bottom: 20px;
   /*padding: 0 43px;*/
 
   h1 {
@@ -144,7 +145,7 @@ body {
 }
 
 .track-name {
-  margin: 0 40px;
+  margin: 0 43px;
 }
 
 .track-main {
@@ -284,9 +285,9 @@ body {
 }
 
 .step-box {
-    border: 1px solid #B1ADAA;
+    border: 1px dashed #B1ADAA;
     padding: 10px;
-    width: 300px;
+    width: 600px;
     border-radius: 4px;
     margin: 15px 44px;
 }
@@ -473,8 +474,7 @@ body {
   background: #ED7952;
   cursor: pointer;
   position: relative;
-  left: 36px;
-  bottom: 14px;
+  left: 196px;
 }
 
 .new-button {
