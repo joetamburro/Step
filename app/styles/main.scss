@@ -146,6 +146,10 @@ body {
 
 .track-name {
   margin: 0;
+  width: 320px;
+  height: 30px;
+  font-size: 18px;
+  padding-left: 6px;
 }
 
 .track-main {
@@ -303,13 +307,20 @@ body {
 }
 
 .step-title {
-    width: 155px;
-    /*height: 32px;*/
+  width: 220px;
+  margin: 0 24px 0 0;
+  height: 22px;
+  font-size: 18px;
+  padding-left: 6px;
+  position: relative;
+  top: 3px;
 }
 
 .action {
     /*display: block;*/
-    width: 160px;
+    width: 235px;
+    position: relative;
+    /*z-index: 200;*/
 }
 
 .view {
@@ -509,7 +520,7 @@ body {
   background: #ED7952;
   cursor: pointer;
   position: relative;
-  left: 196px;
+  left: 26px;
 }
 
 .new-button {
