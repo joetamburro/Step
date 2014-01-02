@@ -141,7 +141,7 @@ StepView = Backbone.View.extend ({
   className: 'step-item',
 
   events: {
-    "click  .add-step"    : "addStep",
+    "click  .delete-step"    : "deleteStep",
   },
 
   initialize: function() {
