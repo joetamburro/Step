@@ -153,6 +153,7 @@ StepView = Backbone.View.extend ({
     this.$el.append( this.template({item: this.model }) );
     this.$el.find('.action').select2({
       minimumResultsForSearch: -1,
+      placeholder: 'Choose an action',
     });
   },
 
