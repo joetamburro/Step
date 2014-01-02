@@ -141,9 +141,7 @@ StepView = Backbone.View.extend ({
   className: 'step-item',
 
   events: {
-    "click .delete-step" : "deleteStep",
-    "click  .add-step"       : "addStep",
-
+    "click  .add-step"    : "addStep",
   },
 
   initialize: function() {
@@ -153,14 +151,9 @@ StepView = Backbone.View.extend ({
 
   render: function() {
     this.$el.append( this.template({item: this.model }) );
-  },
-
-  addStep: function(){
-    // var addedStep = new Step;
-    // this.newSteps.push(addedStep)
-    // creates new step view to add another step
-    new StepView();
-
+    this.$el.find('.action').select2({
+      minimumResultsForSearch: -1,
+    });
   },
 
   deleteStep: function () {
