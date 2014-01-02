@@ -54,15 +54,15 @@ CreateTrackView = Backbone.View.extend({
   className: "step-buttons",
 
   events: {
-    // "click  .add-step"       : "addStep",
+    "click  .add-step"       : "addStep",
     "click  .save-track"     : "saveTrack",
   },
 
   initialize: function() {
     $('.track-window').html('')
-    // this.newSteps = [];
-    // var firstStep = new Step;
-    // this.newSteps.push(firstStep)
+    this.newSteps = [];
+    var firstStep = new Step;
+    this.newSteps.push(firstStep)
     console.log(this.newSteps)
     $('.track-box').append(this.el);
     this.newTrack = new Track();
@@ -73,13 +73,13 @@ CreateTrackView = Backbone.View.extend({
     this.$el.append( this.template({item: this.model }) )
   },
 
-  // addStep: function(){
-  //   var addedStep = new Step;
-  //   this.newSteps.push(addedStep)
-  //   // creates new step view to add another step
-  //   new StepView();
+  addStep: function(){
+    var addedStep = new Step;
+    this.newSteps.push(addedStep)
+    // creates new step view to add another step
+    new StepView();
 
-  // },
+  },
 
   finalizeSaveTrack: function(){
       this.newTrack.save(null, {
@@ -147,25 +147,17 @@ StepView = Backbone.View.extend ({
   },
 
   initialize: function() {
-    this.newSteps = [];
-    var firstStep = new Step;
-    this.newSteps.push(firstStep)
     $('.track-box').append(this.el);
     this.render();
   },
 
   render: function() {
     this.$el.append( this.template({item: this.model }) );
-
-    var lastStepBox = $('.step-box:last')
-    if (lastStepBox) {
-      $('.step-box:last').append('<button class="button add-step">Add Step</button>');
-    }
   },
 
   addStep: function(){
-    var addedStep = new Step;
-    this.newSteps.push(addedStep)
+    // var addedStep = new Step;
+    // this.newSteps.push(addedStep)
     // creates new step view to add another step
     new StepView();
 
