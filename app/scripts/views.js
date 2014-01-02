@@ -207,7 +207,7 @@ function validateSave (){
   var good = true                                       
   $('.errormessage-left').removeClass('active-left')
   $('input, select').removeClass("warning")
-  $('input, select').each(function(){
+  $('input, select').not('.select2-offscreen, .select2-input').each(function(){
     if ($(this).val() == "") {
       console.log("found an empty");
       good = false
