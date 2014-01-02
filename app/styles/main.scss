@@ -145,7 +145,7 @@ body {
 }
 
 .track-name {
-  margin: 0 43px;
+  
 }
 
 .track-main {
@@ -162,7 +162,7 @@ body {
     font-weight: 400;
     color: #0884C0;
     margin-left: 20px;
-    margin-bottom: 0;
+    margin-top: 16px;
   }
 }
 
@@ -290,6 +290,16 @@ body {
     width: 600px;
     border-radius: 4px;
     margin: 15px 44px;
+}
+
+.track-controls {
+  width: 600px;
+  border: 1px solid #DFDDDD;
+  margin-left: 43px;
+  height: 38px;
+  border-radius: 4px;
+  padding: 10px;
+  background: #E7E7E7;
 }
 
 .step-title {
@@ -465,9 +475,34 @@ body {
   outline: none;
 }
 
-.add-step, .save-track {
+.add-step {
   background: #1A93CA;
   cursor: pointer;
+  width: 92px;
+  float: right;
+  margin-left: 10px;
+  line-height: 18px;
+
+  i {
+    /*position: absolute;*/
+    font-size: 16px;
+  }
+}
+
+.save-track {
+  background: #1A93CA;
+  cursor: pointer;
+  width: 92px;
+  float: right;
+  margin-left: 10px;
+  line-height: 32px;
+
+  i {
+    font-size: 14px;
+    position: relative;
+    top: 3px;
+    left: 2px;
+  }
 }
 
 .delete-step {
