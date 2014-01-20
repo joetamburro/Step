@@ -134,6 +134,33 @@ body {
   z-index: 1;
 }
 
+.sign-up-meta {
+  display: inline-block;
+  border: 1px dashed #B1ADAA;
+  margin-left: 40px;
+
+    input {
+      display: block;
+      margin: 15px;
+    }
+}
+
+.username, .password, .email {
+  width: 220px;
+  margin: 0 24px 0 0;
+  height: 22px;
+  font-size: 18px;
+  padding-left: 6px;
+  position: relative;
+  top: 3px;
+}
+
+.submit-user {
+  float: right;
+  margin: 0 15px 10px;
+  cursor: pointer;
+}
+
 .track {
   border: 1px solid #D8D8D8;
   height: 140px;
@@ -149,7 +176,6 @@ body {
   width: 320px;
   height: 30px;
   font-size: 18px;
-  padding-left: 6px;
 }
 
 .track-main {
