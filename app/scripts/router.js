@@ -14,6 +14,7 @@ AppRouter = Backbone.Router.extend ({
     "home"                : "loginScreen",
     "createtrack"         : "createTrack",
     "yourtracks"          : "yourTracks",
+    "applicants"          : "applicants",
   },
 
   loginScreen: function () {
@@ -42,6 +43,12 @@ AppRouter = Backbone.Router.extend ({
         })
       }
     })
+  },
+
+  applicants: function(){
+    $('.track-box').html('');
+    $('.main-view').html('');
+    new ApplicantsView();
   },
 
 })

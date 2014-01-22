@@ -199,7 +199,29 @@ TrackView = Backbone.View.extend({
     this.$el.append( this.template({item: this.model }) );
   },
 
-})
+});
+
+ApplicantsView = Backbone.View.extend({
+
+   
+  className: 'applicant',
+
+  template: _.template( $('#applicants-template').text() ),
+
+  initialize: function () {
+    $('.track-window').html('');
+    $('.track-window').append(this.el);
+    this.render();
+  },
+
+  render: function () {
+    this.$el.append( this.template({item: this.model }) );
+  },
+
+  // trackClicked: function(event){
+  //   console.log("targetted track:", event.target)
+  // }
+});
 
 
 function validateSave (){

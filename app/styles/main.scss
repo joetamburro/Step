@@ -80,7 +80,7 @@ body {
   background: #F5F6F7;
 }
 
-.yourtracks-header {
+.yourtracks-header, .applicants-header {
   background-color: #FFF;
   height: 108px;
   margin-bottom: 20px;
@@ -98,7 +98,7 @@ body {
 
 }
 
-.yourtracks-header:after {
+.yourtracks-header:after, .applicants-header:after {
   position: absolute;
   right: 0;
   left: 0;
@@ -106,15 +106,17 @@ body {
   content: " ";
   background: #fff;
   z-index: 0;
-  }
+}
+
 
 #search-track {
   display: inline-block;
+  font-size: 14px;
   margin-left: 55px;
   width: 206px;
   height: 32px;
   position: relative;
-  bottom: 12px;
+  bottom: 11px;
   text-indent: 6px;
   border: 1px solid #D8D8D8;
   border-radius: 4px 0px 0px 4px;
@@ -160,6 +162,10 @@ body {
   float: right;
   margin: 0 15px 10px;
   cursor: pointer;
+}
+
+.submit-user:hover {
+  background: #1B3B4A;
 }
 
 .track {
