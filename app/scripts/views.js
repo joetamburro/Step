@@ -170,6 +170,7 @@ YourTracksView = Backbone.View.extend({
   template: _.template( $('#your-tracks-template').text() ), 
 
   initialize: function () {
+    $('.applicant').html('');
     $('.track-window').append(this.el);
     this.render();
   },
