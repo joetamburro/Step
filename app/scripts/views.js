@@ -216,6 +216,7 @@ ApplicantsView = Backbone.View.extend({
 
   render: function () {
     this.$el.append( this.template({item: this.model }) );
+    // $('.fill-view').append('<div class="header-filler"></div>')
   },
 
   // trackClicked: function(event){

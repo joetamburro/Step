@@ -72,12 +72,16 @@ body {
   display: inline-block;
   height: 100%;
   vertical-align: top;
-  background: #fafafa;
+  /*background: #FAFAFA;*/
   margin-left: -3px;
+  width: 100%;
+  position: absolute;
 }
 
 .yourtracks {
   background: #F5F6F7;
+  position: relative;
+  left: 4px;
 }
 
 .yourtracks-header, .applicants-header {
@@ -662,4 +666,13 @@ body {
 
 .show-view {
   right: 0px;
+}
+
+/* Applicants view */
+
+.header-filler {
+  height: 115px;
+  background: #fff;
+  position: relative;
+  top: -217px;
 }
