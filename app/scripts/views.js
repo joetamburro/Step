@@ -81,22 +81,6 @@ CreateTrackView = Backbone.View.extend({
 
   },
 
-  finalizeSaveTrack: function(){
-      this.newTrack.save(null, {
-        success: function(newTrack) {
-          // Execute any logic that should take place after the object is saved.
-          // save steps and set 
-          alert('Track Save SUccessful!');
-          window.location.href = "#/yourtracks"
-        },
-        error: function(newTrack, error) {
-          // Execute any logic that should take place if the save fails.
-          // error is a Parse.Error with an error code and description.
-          alert('Failed to create new object, with error code: ' + error.description);
-        }
-      
-    });
-  },
 
   saveTrack: function () {
 
@@ -130,6 +114,23 @@ CreateTrackView = Backbone.View.extend({
         })
       })
     } 
+  },
+  
+  finalizeSaveTrack: function(){
+      this.newTrack.save(null, {
+        success: function(newTrack) {
+          // Execute any logic that should take place after the object is saved.
+          // save steps and set 
+          alert('Track Save SUccessful!');
+          window.location.href = "#/yourtracks"
+        },
+        error: function(newTrack, error) {
+          // Execute any logic that should take place if the save fails.
+          // error is a Parse.Error with an error code and description.
+          alert('Failed to create new object, with error code: ' + error.description);
+        }
+      
+    });
   },
 }),
 
@@ -190,6 +191,10 @@ TrackView = Backbone.View.extend({
 
   template: _.template( $('#your-track-view-template').text() ),
   
+  events: {
+    "click .track" : "renderTrack",
+  },
+
   initialize: function () {
     $('.main-view').html('');
     $('.yourtracks').append(this.el);
@@ -198,6 +203,10 @@ TrackView = Backbone.View.extend({
 
   render: function () {
     this.$el.append( this.template({item: this.model }) );
+  },
+
+  renderTrack: function () {
+
   },
 
 });

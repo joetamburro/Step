@@ -102,6 +102,10 @@ body {
 
 }
 
+.applicants-header {
+  margin-bottom: 0;
+}
+
 .yourtracks-header:after, .applicants-header:after {
   position: absolute;
   right: 0;
@@ -112,8 +116,21 @@ body {
   z-index: 0;
 }
 
+.input {
+  display: inline-block;
+  font-size: 14px;
+  margin-left: 55px;
+  width: 206px;
+  height: 32px;
+  position: relative;
+  /*bottom: 11px;*/
+  text-indent: 6px;
+  border: 1px solid #D8D8D8;
+  border-radius: 4px 0px 0px 4px;
+  z-index: 1;
+}
 
-#search-track {
+.search-track {
   display: inline-block;
   font-size: 14px;
   margin-left: 55px;
@@ -675,4 +692,32 @@ body {
   background: #fff;
   position: relative;
   top: -217px;
+}
+
+.applicant-box {
+  border: 1px solid #D8D8D8;
+  height: 140px;
+  width: 1000px;
+  margin-left: 43px;
+  margin-top: 30px;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.applicant-subhead {
+  display: inline-block;
+  height: 55px;
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #D8D8D8;
+  border-bottom: 1px solid #D8D8D8;
+}
+
+.search-applicant-icon {
+  top: 9px;
+}
+
+.search-applicants {
+  margin-left: 43px;
+  top: -4px;
 }
