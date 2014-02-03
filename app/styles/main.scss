@@ -709,8 +709,8 @@ body {
   height: 55px;
   width: 100%;
   background: #fff;
-  border-top: 1px solid #D8D8D8;
-  border-bottom: 1px solid #D8D8D8;
+  border-top: 1px solid #E8E4E4;
+  border-bottom: 1px solid #E8E4E4;
 }
 
 .search-applicant-icon {
@@ -720,4 +720,76 @@ body {
 .search-applicants {
   margin-left: 43px;
   top: -4px;
+}
+
+.filters {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #D8D8D8;
+  // width: 418px;
+  height: 32px;
+  position: relative;
+  top: 8px;
+  border-radius: 4px;
+  margin-left: 12px;
+  
+  li {
+    display: inline-block;
+    height: 32px;
+    line-height: 54px; 
+    cursor: pointer; 
+  }
+  
+  .all-filter {
+    border-right: 1px solid #D8D8D8;
+    width: 38px; 
+    span {
+      position: relative;
+      bottom: 10px;
+      left: 12px;
+    } 
+  }
+
+  .completed-filter {
+    border-right: 1px solid #D8D8D8;
+    width: 90px;
+    span {
+      position: relative;
+      bottom: 10px;
+      left: 7px;
+    }
+  }
+  
+  .incomplete-filter {
+    border-right: 1px solid #D8D8D8;
+    width: 94px;
+    
+    span {
+      position: relative;
+      bottom: 10px;
+      left: 8px;
+    }
+  }
+
+  .accepted-filter {
+    border-right: 1px solid #D8D8D8;
+    width: 80px;
+    
+    span {
+      position: relative;
+      bottom: 10px;
+      left: 8px;
+    }  
+  }
+
+  .rejected-filter {
+    width: 78px;
+
+    span {
+      position: relative;
+      bottom: 10px;
+      left: 8px;
+    } 
+  }
 }
