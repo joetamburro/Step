@@ -5,8 +5,8 @@ AppRouter = Backbone.Router.extend ({
   initialize: function(){
     this.steps = new StepsCollection();
     this.tracks = new TrackCollection();
-    console.log(this.steps)
-    console.log(this.tracks)
+    // console.log(this.steps)
+    // console.log(this.tracks)
   },
 
   routes: {
@@ -15,6 +15,7 @@ AppRouter = Backbone.Router.extend ({
     "createtrack"         : "createTrack",
     "yourtracks"          : "yourTracks",
     "applicants"          : "applicants",
+    "applicants/typeform" : 'applicantsTypeform'
   },
 
   loginScreen: function () {
@@ -50,6 +51,13 @@ AppRouter = Backbone.Router.extend ({
     $('.main-view').html('');
     new ApplicantsView();
   },
+
+  applicantsTypeform: function(){
+    $('.track-box').html('');
+    $('.main-view').html('');
+    new TypeformView();
+  }
+
 
 })
 

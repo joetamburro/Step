@@ -662,16 +662,16 @@ body {
 
 /* sidbar */
 
-.visible {
-  vertical-align: top;
-  width: $sidebar-width;
-  background-color: #072a3b;
-  display: inline-block;
-  z-index: 1;
-  position: relative;
-  border-top: 1px solid #173648;
-  transition: 500s ease;
-}
+// .visible {
+//   vertical-align: top;
+//   width: $sidebar-width;
+//   background-color: #072a3b;
+//   display: inline-block;
+//   z-index: 1;
+//   position: relative;
+//   border-top: 1px solid #173648;
+//   transition: 500s ease;
+// }
 
 .hidden {
   right: 284px;
@@ -696,12 +696,32 @@ body {
 
 .applicant-box {
   border: 1px solid #D8D8D8;
-  height: 140px;
+  height: 110px;
   width: 1000px;
   margin-left: 43px;
   margin-top: 30px;
   border-radius: 4px;
   background: #fff;
+  position: relative;
+
+  img {
+    display: inline-block;
+    border-radius: 4px;
+    margin: 12px;
+  }
+
+  h2 {
+    display: inline-block;
+    font-weight: 400;
+    color: #0884C0;
+    margin-left: 12px;
+    margin-top: 16px;
+    vertical-align: top;
+  }
+}
+
+.applicant-box:hover {
+  cursor: pointer;
 }
 
 .applicant-subhead {
@@ -792,4 +812,15 @@ body {
       left: 8px;
     } 
   }
+}
+
+.progress-bar {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 10px;
+  width: 100%;
+  border-radius: 0 0 4px 4px;
+  border-top: 1px solid #D8D8D8;
 }

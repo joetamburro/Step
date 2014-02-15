@@ -1,0 +1,95 @@
+/* 
+Need to be able to create new tracks
+Need to be able to edit tracks and steps
+Need to be able to delete tracks 
+Need to be able to place applicants in a rejected queu 
+Need to be able to mark applicants as accepted
+Need to be able to visualize an applicants progress through a track
+*/
+
+// We need a timestamp for application changes so we can filter 
+
+// Tracks
+// GET /api/v1/tracks/:track_id
+[
+  {
+    "track_id"     : "adsf3453453",
+    "track_name"   : "Greenville Front End Engineering Q1", 
+    "created_by"   : "Eric Dodds",
+    "progress"     : 90,
+    "applicants": [
+      {
+        "user_id"    : "fc352a990",
+        "user_photo" : "",
+        "first_name"  : "",
+        "last_name"   : "" 
+      }
+    ],
+    "steps": [
+      {
+        "step_number"  : "1", 
+        "step_title"   : "First Interview",
+        "step_action"  : "dropdown value"
+      },
+      {
+        "step_number"  : "2", 
+        "step_title"   : "Second Interview",
+        "step_action"  : "dropdown value"
+      },
+    ]
+  }
+]
+
+// Applicants
+// GET /api/v1/applicants
+[
+  {
+    "user_id"    : "fc352a990",
+    "first_name"  : "",
+    "last_name"   : "", 
+    "courses"     : [
+      {
+        "id": "123",
+        "course_name": "Ruby Engineering",
+        "status": "rejected",
+        "progress": 60
+
+      },
+
+      {
+        "id": "123",
+        "course_name": "Python Engineering",
+        "status": "accepted",
+        "progress": 100
+      },
+
+      {
+        "id": "123",
+        "course_name": "JS Engineering",
+        "status": "pending",
+        "progress": 80
+      }
+    ],
+  }
+]
+
+// ????? Application Questions and Answers
+// GET /api/v1/tracks/:track_id/applicant/:applicant_id
+[
+  {
+    "user_id" : "fc352a990",
+    "url_photo": "http://coolguys.com/asdf.jpg",
+    "responses": [
+      {
+        "question_id": "fff00099888773",
+        "question": "Which course are you applying for?",
+        "response": "sfdsfasdfasdfas fd asf asfsf"
+      }
+      {
+        "question_id": "fff00099888774",
+        "question": "Why programming?",
+        "response": "sfdsfasdfasdfas fd asf asfsf"
+      }    
+    ]
+  }
+]

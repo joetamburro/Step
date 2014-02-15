@@ -33,3 +33,26 @@ Track = Parse.Object.extend({
 
 
 })
+
+Applicant = Parse.Object.extend({
+  defaults: {
+    "firstName"        : "",
+    "lastName"      : "", 
+    "course"  : "",
+    "user_id"    : "",
+  },
+
+  className: "Applicant",
+
+  initialize: function(){
+
+  },
+
+  parse: function (response){
+
+  },
+
+  // idAttribute: "_id",
+
+
+})

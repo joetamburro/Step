@@ -115,7 +115,7 @@ CreateTrackView = Backbone.View.extend({
       })
     } 
   },
-  
+
   finalizeSaveTrack: function(){
       this.newTrack.save(null, {
         success: function(newTrack) {
@@ -192,7 +192,7 @@ TrackView = Backbone.View.extend({
   template: _.template( $('#your-track-view-template').text() ),
   
   events: {
-    "click .track" : "renderTrack",
+    "click .track" : "renderApplicants",
   },
 
   initialize: function () {
@@ -205,15 +205,15 @@ TrackView = Backbone.View.extend({
     this.$el.append( this.template({item: this.model }) );
   },
 
-  renderTrack: function () {
-
+  renderApplicants: function () {
+    this.track
+    
   },
 
 });
 
 ApplicantsView = Backbone.View.extend({
 
-   
   className: 'applicant',
 
   template: _.template( $('#applicants-template').text() ),
@@ -226,13 +226,52 @@ ApplicantsView = Backbone.View.extend({
 
   render: function () {
     this.$el.append( this.template({item: this.model }) );
+    this.fetchApplicants();
     // $('.fill-view').append('<div class="header-filler"></div>')
   },
 
-  // trackClicked: function(event){
-  //   console.log("targetted track:", event.target)
-  // }
+  fetchApplicants: function(){
+    var applicants = $.get('http://company-directory.herokuapp.com/api/v1/applicants.json');
+    console.log(applicants)
+  },
+
+
+
 });
+
+TypeformView = Backbone.View.extend({
+
+  className: 'applicant-typeform',
+
+  template: _.template($('#typeform-template').text()),
+
+  initialize: function(){
+    $('.track-window').html('');
+    $('.track-window').append(this.el);
+    this.render()
+  },
+
+  render: function(){
+    this.$el.append(this.template({item: this.model}));
+  },
+
+
+})
+
+//   yourTracks: function() {
+//     $('.track-box').html('');
+//     // $('.main-view').html('');
+//     new YourTracksView();
+
+// // fetching all tracks. 
+//     this.tracks.fetch({
+//       success: function(tracks){
+//         tracks.each(function(track){
+//           new TrackView( {model: track} )
+//         })
+//       }
+//     })
+//   },
 
 
 function validateSave (){
