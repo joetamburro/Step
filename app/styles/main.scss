@@ -703,6 +703,13 @@ body {
   border-radius: 4px;
   background: #fff;
   position: relative;
+  cursor: pointer;
+  color: #0884C0;
+
+  hr {
+    border: 0;
+    border-top: 1px solid #D8D8D8;
+  }
 
   img {
     display: inline-block;
@@ -713,15 +720,19 @@ body {
   h2 {
     display: inline-block;
     font-weight: 400;
-    color: #0884C0;
     margin-left: 12px;
     margin-top: 16px;
     vertical-align: top;
   }
 }
 
-.applicant-box:hover {
-  cursor: pointer;
+.little-padding {
+  padding: 0 2%;
+  height: initial;
+}
+
+.applicant-typeform {
+  padding-bottom: 20px;
 }
 
 .applicant-subhead {
