@@ -1,10 +1,32 @@
-Parse.initialize("rFRxcDA5rl9aA5ze4Bi1Mrkx78ptWVVu4PUZo9kr", "3d2EM2hDuMATrmjdhCOViF3SPKFvKqoKq4mQ5jd8");
+// Parse.initialize("rFRxcDA5rl9aA5ze4Bi1Mrkx78ptWVVu4PUZo9kr", "3d2EM2hDuMATrmjdhCOViF3SPKFvKqoKq4mQ5jd8");
 
-// $(document).ready(function(){
-//   // $('.action').select2();
+function getTracks(){
+  var tracks = $.get('http://company-directory.herokuapp.com/api/v1/tracks.json', function(tracks){
+    tracks.forEach(function(track){
+      new TrackView( {model: track})
+    })
+  })
+  console.log(tracks)
+};
 
 
-// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

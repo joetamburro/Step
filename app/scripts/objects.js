@@ -1,6 +1,6 @@
 console.log('hello models script')
 
-Step = Parse.Object.extend ({
+Step = Backbone.Model.extend ({
   defaults: {
     "stepNumber" : "",
     "title"       : "", 
@@ -15,7 +15,7 @@ Step = Parse.Object.extend ({
 
 }),
 
-Track = Parse.Object.extend({
+Track = Backbone.Model.extend({
   defaults: {
     "id"        : "",
     "trackName"      : "", 
@@ -34,7 +34,7 @@ Track = Parse.Object.extend({
 
 })
 
-Applicant = Parse.Object.extend({
+Applicant = Backbone.Model.extend({
   defaults: {
     "firstName"        : "",
     "lastName"      : "", 

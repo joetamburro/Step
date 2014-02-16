@@ -35,16 +35,17 @@ AppRouter = Backbone.Router.extend ({
     $('.track-box').html('');
     // $('.main-view').html('');
     new YourTracksView();
-
+    getTracks();
+},
 // fetching all tracks. 
-    this.tracks.fetch({
-      success: function(tracks){
-        tracks.each(function(track){
-          new TrackView( {model: track} )
-        })
-      }
-    })
-  },
+  //   this.tracks.fetch({
+  //     success: function(tracks){
+  //       tracks.each(function(track){
+  //         new TrackView( {model: track} )
+  //       })
+  //     }
+  //   })
+  // },
 
   applicants: function(){
     $('.track-box').html('');

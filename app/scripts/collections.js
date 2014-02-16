@@ -1,6 +1,6 @@
 console.log('hello collection script')
 
-StepsCollection = Parse.Collection.extend ({
+StepsCollection = Backbone.Collection.extend ({
 
   model: Step,
 
@@ -12,7 +12,7 @@ StepsCollection = Parse.Collection.extend ({
 
 }),
 
-TrackCollection = Parse.Collection.extend ({
+TrackCollection = Backbone.Collection.extend ({
 
   model: Track,
 
@@ -25,7 +25,7 @@ TrackCollection = Parse.Collection.extend ({
 
 }),
 
-ApplicantsCollection = Parse.Collection.extend ({
+ApplicantsCollection = Backbone.Collection.extend ({
 
   model: Applicant,
   

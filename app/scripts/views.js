@@ -85,7 +85,6 @@ CreateTrackView = Backbone.View.extend({
   saveTrack: function () {
 
     var trackName = $('.track-name').val();
-
     // newTrack.set("id", );
     this.newTrack.set("trackName",  trackName);
     // newTrack.set("settings", );
@@ -93,45 +92,49 @@ CreateTrackView = Backbone.View.extend({
 
     // amount of steps we have
     var total = this.newSteps.length
+
     // setting the count to 0
     var count = 0;
-    var that = this;
-    // looping through all the steps
-    if (validateSave()) {
-      _.each(this.newSteps, function(step){
-        step.save(null, {
-          success: function(){
-             // adding relation between step and track
-            that.newTrack.relation("steps").add(step)
-            // adds 1 to the count
-            count++;
-            
-            if (count == total) {
-              // now all saves have finished, so we can save the track
-              that.finalizeSaveTrack()
-            }
-          }
-        })
-      })
-    } 
-  },
 
-  finalizeSaveTrack: function(){
-      this.newTrack.save(null, {
-        success: function(newTrack) {
-          // Execute any logic that should take place after the object is saved.
-          // save steps and set 
-          alert('Track Save SUccessful!');
-          window.location.href = "#/yourtracks"
-        },
-        error: function(newTrack, error) {
-          // Execute any logic that should take place if the save fails.
-          // error is a Parse.Error with an error code and description.
-          alert('Failed to create new object, with error code: ' + error.description);
-        }
+    // fix scope issue
+    var that = this;
+
+    // looping through all the steps
+    // if (validateSave()) {
+    //   _.each(this.newSteps, function(step){
+    //     step.save(null, {
+    //       success: function(){
+    //          // adding relation between step and track
+    //         that.newTrack.relation("steps").add(step)
+    //         // adds 1 to the count
+    //         count++;
+            
+    //         if (count == total) {
+    //           // now all saves have finished, so we can save the track
+    //           that.finalizeSaveTrack()
+    //         }
+    //       }
+    //     })
+    //   })
+    // } 
+  }
+
+  // finalizeSaveTrack: function(){
+  //     this.newTrack.save(null, {
+  //       success: function(newTrack) {
+  //         // Execute any logic that should take place after the object is saved.
+  //         // save steps and set 
+  //         alert('Track Save SUccessful!');
+  //         window.location.href = "#/yourtracks"
+  //       },
+  //       error: function(newTrack, error) {
+  //         // Execute any logic that should take place if the save fails.
+  //         // error is a Parse.Error with an error code and description.
+  //         alert('Failed to create new object, with error code: ' + error.description);
+  //       }
       
-    });
-  },
+  //   });
+  // },
 }),
 
 
