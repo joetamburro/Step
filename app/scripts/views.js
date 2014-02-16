@@ -1,6 +1,6 @@
 console.log('hello views script')
 
-SignupView = Backbone.View.extend({
+HomeView = Backbone.View.extend({
 
   className: 'sign-up',
 
