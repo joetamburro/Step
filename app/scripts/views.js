@@ -1,5 +1,8 @@
 console.log('hello views script')
 
+var stepCount = 0;
+console.log(stepCount);
+
 HomeView = Backbone.View.extend({
 
   className: 'sign-up',
@@ -62,8 +65,12 @@ CreateTrackView = Backbone.View.extend({
     $('.track-window').html('')
     this.newSteps = [];
     var firstStep = new Step;
-    this.newSteps.push(firstStep)
-    console.log(this.newSteps)
+    console.log(stepCount);
+    firstStep.number = 1;
+    console.log('the initial step number is ' + firstStep.number)
+    stepCount = firstStep.number;
+    console.log('the step count is ' + stepCount)
+    this.newSteps.push(firstStep);
     $('.track-box').append(this.el);
     this.newTrack = new Track();
     this.render();
@@ -75,6 +82,10 @@ CreateTrackView = Backbone.View.extend({
 
   addStep: function(){
     var addedStep = new Step;
+    addedStep.number = stepCount + 1;
+    stepCount = addedStep.number;
+    console.log('this step number is ' + addedStep.number)
+    console.log('the step count is now ' + stepCount)
     this.newSteps.push(addedStep)
     // creates new step view to add another step
     new StepView();
