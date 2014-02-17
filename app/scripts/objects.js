@@ -1,11 +1,6 @@
 console.log('hello models script')
 
 Step = Backbone.Model.extend ({
-  defaults: {
-    "stepNumber" : "",
-    "title"       : "", 
-    "action"      : "" 
-  },
 
   className: "Step",
 
@@ -16,12 +11,6 @@ Step = Backbone.Model.extend ({
 }),
 
 Track = Backbone.Model.extend({
-  defaults: {
-    "id"        : "",
-    "trackName"      : "", 
-    "settings"  : "",
-    "user_id"    : "",
-  },
 
   className: "Track",
 
@@ -31,16 +20,11 @@ Track = Backbone.Model.extend({
 
   idAttribute: "_id",
 
+  // url: 'http://company-directory.herokuapp.com/api/v1/tracks.json'
 
 })
 
 Applicant = Backbone.Model.extend({
-  defaults: {
-    "firstName"        : "",
-    "lastName"      : "", 
-    "course"  : "",
-    "user_id"    : "",
-  },
 
   className: "Applicant",
 
@@ -48,11 +32,7 @@ Applicant = Backbone.Model.extend({
 
   },
 
-  parse: function (response){
-
-  },
 
   // idAttribute: "_id",
-
 
 })

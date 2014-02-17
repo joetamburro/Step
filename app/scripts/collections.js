@@ -16,7 +16,7 @@ TrackCollection = Backbone.Collection.extend ({
 
   model: Track,
 
-  // url: 'http://company-directory.herokuapp.com/api/v1/students.json',
+  url: 'http://company-directory.herokuapp.com/api/v1/tracks.json',
 
   initialize: function() {
     console.log('track collection instantiated')

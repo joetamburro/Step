@@ -219,10 +219,10 @@ TrackView = Backbone.View.extend({
     this.$el.append( this.template({item: this.model }) );
   },
 
-  renderApplicants: function () {
-    this.track
+  // renderApplicants: function () {
+  //   this.track
     
-  },
+  // },
 
 });
 
