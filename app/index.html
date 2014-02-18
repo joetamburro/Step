@@ -45,11 +45,15 @@
                 </div>
                 <div class="sidebar-box">
                     <i class="ss-share">&#xF601;</i>
-                    <h3>Application Tracks</h3>
+                    <a href="#/yourtracks">
+                        <h3>Application Tracks</h3>
+                    </a>
                 </div>
                 <div class="sidebar-box">
                     <i class="ss-users">&#x1F465;</i>
-                    <h3>All Applicants</h3>
+                    <a href="#/yourtracks/:id">
+                        <h3>All Applicants</h3>
+                    </a>
                 </div>
                 <div class="sidebar-box">
                     <i class="ss-desktop">&#x1F4BB;</i>
@@ -192,7 +196,7 @@
 
         <script type="text/template" id="track-applicants-template">
             <div class="applicants-header">
-                <h1> Cool Track Name </h1>
+                <h1> dag namit </h1>
             </div>
 
             <div class="applicant-subhead">
@@ -202,30 +206,41 @@
                 </div> 
               
                     <ul class="filters">
-                        <li class="all-filter"><span>All</span></li>
-                        <li class="completed-filter"><span>Completed</span></li>
-                        <li class="incomplete-filter"><span>Incomplete</span></li>
-                        <li class="accepted-filter"><span>Accepted</span></li>
-                        <li class="rejected-filter"><span>Rejected</span></li>
+                        <li class="all-filter">
+                            <span>All</span>
+                        </li>
+                        <li class="completed-filter">
+                            <span>Completed</span>
+                        </li>
+                        <li class="incomplete-filter">
+                            <span>Incomplete</span>
+                        </li>
+                        <li class="accepted-filter">
+                            <span>Accepted</span>
+                        </li>
+                        <li class="rejected-filter">
+                            <span>Rejected</span>
+                        </li>
                     </ul>
 
             </div>
 
         </script>
-
-        <script type="text/template" id="applicant-view-template">
-            <div class="applicant-box">
-                <img class="applicant-avatar" src="http://placehold.it/80x80">
-                <h2 class="applicant-name"><%= item.get('name') %></h2>
-                <h3 class="applicant-email"><%= item.get('email') %></h3>
-                <i class="ss-navigateright"></i>
-                <div class="progress-bar"></div>
-            </div>
+        
+        <script type="text/template" id="applicant-view-template">         
+                <div class="applicant-box">
+                    <img class="applicant-avatar" src="http://placehold.it/80x80"   >
+                    <h2 class="applicant-name"><%= item.get('name') %></h2>
+                    <h3 class="applicant-email"><%= item.get('email') %></h3>
+                    <i class="ss-navigateright"></i>
+                    <div class="progress-bar"></div>
+                </div>
+            </a>
         </script>
 
         <script type="text/template" id="typeform-template">
             <div class="yourtracks-header">
-                <h1>Student Name</h1>
+                <h1> test </h1>
             </div>
             <div class="applicant-box little-padding">
                 <h3>Fake Question</h3>

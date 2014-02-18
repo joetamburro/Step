@@ -2,20 +2,21 @@ console.log('hello router script')
 
 AppRouter = Backbone.Router.extend ({
 // when router init'd instantiate steps and tracks collections
+  routes: {
+    ""                                          : "loginScreen",
+    "home"                                      : "loginScreen",
+    "createtrack"                               : "createTrack",
+    "yourtracks"                                : "yourTracks",
+    "yourtracks/:track_id"                      : "trackApplicants",
+    "yourtracks/:track-id/:applicant" : "applicantsTypeform"
+  },
+
   initialize: function(){
     this.steps = new StepsCollection();
     this.tracks = new TrackCollection();
     this.applicants = new ApplicantsCollection();
   },
 
-  routes: {
-    ""                              : "loginScreen",
-    "home"                          : "loginScreen",
-    "createtrack"                   : "createTrack",
-    "yourtracks"                    : "yourTracks",
-    "yourtracks/:id"                : "trackApplicants",
-    "yourtracks/:id/applicant/:id"  : "applicantsTypeform"
-  },
 
   loginScreen: function () {
     $('.track-window').html('')
@@ -49,10 +50,12 @@ AppRouter = Backbone.Router.extend ({
     $('.track-box').html('');
     $('.main-view').html('');
     new TrackApplicantsView();
+    console.log('firing torpedoes')
     this.applicants.fetch({
       success: function(applicants){
+        console.log('hey dude')
         applicants.each(function(applicant){
-          new ApplicantView( {model: applicant} )
+          new ApplicantView( {model: applicant, trackId: id} )
         })
       }
     })

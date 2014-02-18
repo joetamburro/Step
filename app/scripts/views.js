@@ -286,21 +286,6 @@ TypeformView = Backbone.View.extend({
 
 })
 
-//   yourTracks: function() {
-//     $('.track-box').html('');
-//     // $('.main-view').html('');
-//     new YourTracksView();
-
-// // fetching all tracks. 
-//     this.tracks.fetch({
-//       success: function(tracks){
-//         tracks.each(function(track){
-//           new TrackView( {model: track} )
-//         })
-//       }
-//     })
-//   },
-
 
 function validateSave (){
   // reset status
