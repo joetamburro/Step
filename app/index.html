@@ -149,48 +149,50 @@
                 </div>
             </div>
         </script>
-
-        <script type="text/template" id="your-track-view-template">
-            <div class="track-main">
-                <h2 class="track-name"> <%= item.get('trackName') %></h2>
-                <i class="ss-navigateright"></i>
-                <br>
-                <div class="track-meta">
-                    <h6>test</h6> 
-                    <span class="divider">|</span>       
-                    <h6>test</h6>       
-                    <span class="divider">|</span>            
-                    <h6>test</h6> 
+        
+        <script type="text/template" id="your-track-view-template">    
+            <a href="#/yourtracks/<%= item.get('id') %>">
+                <div class="track-main">
+                    <h2 class="track-name"> <%= item.get('name') %></h2>
+                    <i class="ss-navigateright"></i>
+                    <br>
+                    <div class="track-meta">
+                        <h6>test</h6> 
+                        <span class="divider">|</span>       
+                        <h6>test</h6>       
+                        <span class="divider">|</span>            
+                        <h6>test</h6> 
+                    </div>
                 </div>
-            </div>
-
-            <div class="track-bottom">
-                    <div class="class-status">
-                        <i class="ss-record"></i>
-                        <h3>Open</h3>
-                    </div>
-        
-                    <div class="class-applicants">
-                        <span class="applicant-count">23</span>
-                        <h3>Applicants</h3>
-                    </div>
-        
-                    <div class="class-accepted">
-                        <span class="applicants-accepted">9/15</span>
-                        <h3>Accepted</h3>
-                    </div>  
-
-                    <div class="steps-icon">
-                        <p>Steps</p>
-                        <i class="ss-layergroup"></i>
-                    </div>          
-            </div>
+            </a>
+    
+                <div class="track-bottom">
+                        <div class="class-status">
+                            <i class="ss-record"></i>
+                            <h3>Open</h3>
+                        </div>
+            
+                        <div class="class-applicants">
+                            <span class="applicant-count">23</span>
+                            <h3>Applicants</h3>
+                        </div>
+            
+                        <div class="class-accepted">
+                            <span class="applicants-accepted">9/15</span>
+                            <h3>Accepted</h3>
+                        </div>  
+    
+                        <div class="steps-icon">
+                            <p>Steps</p>
+                            <i class="ss-layergroup"></i>
+                        </div>          
+                </div>
 
         </script>
 
-        <script type="text/template" id="applicants-template">
+        <script type="text/template" id="track-applicants-template">
             <div class="applicants-header">
-                <h1>2013 Greenville Front End Engineering - Q1</h1>
+                <h1> Cool Track Name </h1>
             </div>
 
             <div class="applicant-subhead">
@@ -209,13 +211,16 @@
 
             </div>
 
+        </script>
+
+        <script type="text/template" id="applicant-view-template">
             <div class="applicant-box">
                 <img class="applicant-avatar" src="http://placehold.it/80x80">
-                <h2 class="applicant-name">Joe Tamburro</h2>
+                <h2 class="applicant-name"><%= item.get('name') %></h2>
+                <h3 class="applicant-email"><%= item.get('email') %></h3>
                 <i class="ss-navigateright"></i>
                 <div class="progress-bar"></div>
             </div>
-
         </script>
 
         <script type="text/template" id="typeform-template">
@@ -476,7 +481,7 @@
         <script src="scripts/views.js"></script>
         <script src="scripts/objects.js"></script>
         <script src="scripts/collections.js"></script>
-        <script src="scripts/router.js"></script>sc
+        <script src="scripts/router.js"></script>
     </body>
 </html>
 

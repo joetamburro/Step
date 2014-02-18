@@ -29,7 +29,7 @@ ApplicantsCollection = Backbone.Collection.extend ({
 
   model: Applicant,
   
-  // url: 'http://company-directory.herokuapp.com/api/v1/students.json',
+  url: 'http://company-directory.herokuapp.com/api/v1/applicants.json',
 
   initialize: function() {
     console.log('applicant collection instantiated')

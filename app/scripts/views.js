@@ -226,11 +226,9 @@ TrackView = Backbone.View.extend({
 
 });
 
-ApplicantsView = Backbone.View.extend({
+TrackApplicantsView = Backbone.View.extend({
 
-  className: 'applicant',
-
-  template: _.template( $('#applicants-template').text() ),
+  template: _.template( $('#track-applicants-template').text() ),
 
   initialize: function () {
     $('.track-window').html('');
@@ -240,7 +238,7 @@ ApplicantsView = Backbone.View.extend({
 
   render: function () {
     this.$el.append( this.template({item: this.model }) );
-    this.fetchApplicants();
+    // this.fetchApplicants();
     // $('.fill-view').append('<div class="header-filler"></div>')
   },
 
@@ -249,7 +247,23 @@ ApplicantsView = Backbone.View.extend({
     console.log(applicants)
   },
 
+});
 
+ApplicantView = Backbone.View.extend({
+
+  className: 'applicant',
+
+  template: _.template( $('#applicant-view-template').text() ) ,
+
+  initialize: function () {
+    // $('.main-view').html('');
+    $('.track-window').append(this.el);
+    this.render();
+  },
+
+  render: function () {
+    this.$el.append( this.template({item: this.model }) );
+  },
 
 });
 
