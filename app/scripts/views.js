@@ -300,7 +300,7 @@ function validateSave (){
   var good = true;
   $('.errormessage-left').removeClass('active-left')
   $('input').removeClass("warning")
-  $('.step-title').each(function(){
+  $('.step-title, .track-name').each(function(){
     if ($(this).val() == "") {
       console.log("found an empty");
       good = false;
@@ -320,7 +320,7 @@ function validateSave (){
 }
 
 // modal close button
-$('.Button-2').click(function () {
+$('.modal-button').click(function () {
   console.log('done!')
   $('.modal').removeClass('modal-active');
 })
