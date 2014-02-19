@@ -110,7 +110,7 @@ CreateTrackView = Backbone.View.extend({
     // fix scope issue
     var that = this;
 
-    // looping through all the steps
+    // // looping through all the steps
     // if (validateSave()) {
     //   _.each(this.newSteps, function(step){
     //     step.save(null, {
@@ -128,7 +128,7 @@ CreateTrackView = Backbone.View.extend({
     //     })
     //   })
     // } 
-  }
+  },
 
   // finalizeSaveTrack: function(){
   //     this.newTrack.save(null, {
@@ -191,7 +191,7 @@ YourTracksView = Backbone.View.extend({
   },
 
   render: function () {
-    this.$el.append( this.template({item: this.model }) );
+    this.$el.append( this.template({item: this.model}) );
     // new TrackView();
 
   },
@@ -288,19 +288,33 @@ TypeformView = Backbone.View.extend({
 
 
 function validateSave (){
+  // var first = $("input").each(function(thing){
+  //   thing.val() == "" ? return false : return true
+  // })
+  // var second = !$(".action").each(function(thing){
+  //   thing.select2("val") == "" ? return false : return true
+
+  // })
+
   // reset status
-  var good = true                                       
+  var good = true;
   $('.errormessage-left').removeClass('active-left')
-  $('input, select').removeClass("warning")
-  $('input, select').not('.select2-offscreen, .select2-input').each(function(){
+  $('input').removeClass("warning")
+  $('.step-title').each(function(){
     if ($(this).val() == "") {
       console.log("found an empty");
-      good = false
+      good = false;
       $(this).addClass("warning")
       $('.errormessage-left').addClass('active-left'),
       $('.modal').addClass('modal-active'); 
     }
   })
+  if(!$(".action").select2("val")){
+      $(this).addClass("warning")
+      $('.errormessage-left').addClass('active-left'),
+      $('.modal').addClass('modal-active'); 
+    good = false;
+  }
   console.log(good)
   return good
 }
