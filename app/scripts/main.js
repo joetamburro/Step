@@ -1,14 +1,35 @@
 // Parse.initialize("rFRxcDA5rl9aA5ze4Bi1Mrkx78ptWVVu4PUZo9kr", "3d2EM2hDuMATrmjdhCOViF3SPKFvKqoKq4mQ5jd8");
 
-function getTracks(){
-  var tracks = $.get('http://company-directory.herokuapp.com/api/v1/tracks.json', function(tracks){
-    tracks.forEach(function(track){
-      new TrackView( {model: track})
-    })
-  })
-  console.log(tracks)
-};
+function validateSave (){
 
+  // reset status
+  var good = true;
+  $('.errormessage-left').removeClass('active-left')
+  $('input').removeClass("warning")
+  $('.step-title, .track-name').each(function(){
+    if ($(this).val() == "") {
+      console.log("found an empty");
+      good = false;
+      $(this).addClass("warning")
+      $('.errormessage-left').addClass('active-left'),
+      $('.modal').addClass('modal-active'); 
+    }
+  })
+  if(!$(".action").select2("val")){
+      $(this).addClass("warning")
+      $('.errormessage-left').addClass('active-left'),
+      $('.modal').addClass('modal-active'); 
+    good = false;
+  }
+  console.log(good)
+  return good
+}
+
+// modal close button
+$('.modal-button').click(function () {
+  console.log('done!')
+  $('.modal').removeClass('modal-active');
+})
 
 
 

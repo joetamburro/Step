@@ -210,6 +210,7 @@ TrackView = Backbone.View.extend({
   },
 
   initialize: function () {
+    console.log(this.model)
     $('.main-view').html('');
     $('.yourtracks').append(this.el);
     this.render();
@@ -242,10 +243,10 @@ TrackApplicantsView = Backbone.View.extend({
     // $('.fill-view').append('<div class="header-filler"></div>')
   },
 
-  fetchApplicants: function(){
-    var applicants = $.get('http://company-directory.herokuapp.com/api/v1/applicants.json');
-    console.log(applicants)
-  },
+  // fetchApplicants: function(){
+  //   var applicants = $.get('http://company-directory.herokuapp.com/api/v1/applicants.json');
+  //   console.log(applicants)
+  // },
 
 });
 
@@ -271,11 +272,36 @@ TypeformView = Backbone.View.extend({
 
   className: 'applicant-typeform',
 
-  template: _.template($('#typeform-template').text()),
+  masterTemplate: _.template($('#typeform-template').text()),
+  questionTemplate: _.template($('#question-template').text()),
 
-  initialize: function(){
+  initialize: function(options){
+    console.log(options)
     $('.track-window').html('');
     $('.track-window').append(this.el);
+    this.render()
+  },
+
+  render: function(){
+    this.$el.append(this.masterTemplate({item: this.model}));
+    this.$el.append(this.questionTemplate({item: this.model}));
+  },
+
+  fetchQuestions: function(){
+    $.get("http://company-directory.herokuapp.com/api/v1/applicants/:applicant_id/applications/:application_id/questions.json")
+  },
+
+
+});
+
+QuestionView = Backbone.View.extend({
+
+  className: 'question-response',
+
+
+  initialize: function(){
+    // $('.track-window').html('');
+    $('.question-box').append(this.el);
     this.render()
   },
 
@@ -284,17 +310,13 @@ TypeformView = Backbone.View.extend({
   },
 
 
-})
+});
+
+
+
 
 
 function validateSave (){
-  // var first = $("input").each(function(thing){
-  //   thing.val() == "" ? return false : return true
-  // })
-  // var second = !$(".action").each(function(thing){
-  //   thing.select2("val") == "" ? return false : return true
-
-  // })
 
   // reset status
   var good = true;

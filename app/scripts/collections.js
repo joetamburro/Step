@@ -4,7 +4,7 @@ StepsCollection = Backbone.Collection.extend ({
 
   model: Step,
 
-  // url: 'http://company-directory.herokuapp.com/api/v1/students.json',
+  url: 'http://company-directory.herokuapp.com/api/v1/tracks/:track_id/steps.json',
 
   initialize: function(){
     console.log('steps collection instantiated')
@@ -36,5 +36,17 @@ ApplicantsCollection = Backbone.Collection.extend ({
 
   },
 
+})
+
+  QuestionsCollection = Backbone.Collection.extend ({
+
+    model: Question,
+    
+    url: "http://company-directory.herokuapp.com/api/v1/applicants/'appid'/applications/:application_id/questions.json",
+
+    initialize: function() {
+      console.log('applicant collection instantiated')
+
+    },
 
 })

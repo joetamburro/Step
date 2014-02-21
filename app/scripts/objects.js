@@ -32,7 +32,14 @@ Applicant = Backbone.Model.extend({
 
   },
 
+}),
 
-  // idAttribute: "_id",
+Question = Backbone.Model.extend({
 
-})
+  className: "Question",
+
+  initialize: function(){
+
+  },
+
+})  // idAttribute: "_id",
