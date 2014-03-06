@@ -55,7 +55,7 @@ AppRouter = Backbone.Router.extend ({
     this.applicants.fetch({
       success: function(applicants){
         console.log(applicants)
-        applicants.each(function(applicant){
+        applicants.each(function(applicant, track_id){
           new ApplicantView( {model: applicant, trackId: track_id} )
         })
       }
@@ -63,8 +63,7 @@ AppRouter = Backbone.Router.extend ({
   },
 
   applicantsTypeform: function(id){
-    window.applicantId = id;
-    
+    window.applicantId = id; 
     $('.track-box').html('');
     $('.main-view').html('');
     new TypeformView({applicantId: id, name: name});

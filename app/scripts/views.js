@@ -220,10 +220,9 @@ TrackView = Backbone.View.extend({
     this.$el.append( this.template({item: this.model }) );
   },
 
-  // renderApplicants: function () {
-  //   this.track
-    
-  // },
+  // applicantCount: function() {
+  //   var count = $.get('')
+  // }
 
 });
 
